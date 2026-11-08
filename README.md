@@ -1,11 +1,11 @@
 # Vocal Frontier
 
-**An open challenge with up to $1000 in prizes: push out the speed-against-quality frontier of vocal separation.**
+**An open challenge: up to $1000 in prizes for faster, cleaner vocal separation.**
 
-Separating a vocal lets you sync lyrics, transcribe a song, match samples and make karaoke. Today you trade one for the
-other. On a low-power mini PC's CPU, HTDemucs-lite-8k separates a 3.5-minute song in about 30 seconds and scores 10.1 dB.
-MelBand Kim scores 14.3 dB but takes over an hour on the same CPU, and as one graph it doesn't fit in a browser's memory. This
-challenge pays for closing that gap, and every paid entry publishes its own work under a permissive license.
+Pulling the vocal out of a song lets you sync lyrics, transcribe it, match samples and make karaoke. Today you have to choose
+between speed and quality. On a low-power mini PC's CPU, HTDemucs-lite-8k separates a 3.5-minute song in about 30 seconds but
+scores only 10.1 dB. MelBand Kim scores 14.3 dB but takes over an hour on the same CPU, and as one graph it doesn't fit in a
+browser's memory. This challenge pays for closing that gap.
 
 - **Board and in-browser benchmark:** https://vocal-frontier.kendell.dev/
 - **Runs:** November 7, 2026 to 8 pm Pacific on November 21, 2026 (04:00 UTC, November 22). Two weeks.
@@ -16,24 +16,13 @@ challenge pays for closing that gap, and every paid entry publishes its own work
 Every entry is a point on a chart. Across is speed, up is quality. A point covers everything to its lower left, and you get
 paid for the area you cover that nobody before you did. You don't have to be the fastest or the cleanest.
 
-```
- quality
- (dB)  ▲
-       │░░░░░░●                         ● existing models
-       │░░░░░░│                         ◆ your entry
-       │░░░░░░│███████████████◆         ░ already covered
-       │░░░░░░░░░░░░░░░░●█████│         █ new: what you're paid for
-       │░░░░░░░░░░░░░░░░│█████│
-       │░░░░░░░░░░░░░░░░│█████│         One unit = one doubling of speed × one dB.
-       │░░░░░░░░░░░░░░░░░░░░░░░░░░●
-       │░░░░░░░░░░░░░░░░░░░░░░░░░░│
-       │░░░░░░░░░░░░░░░░░░░░░░░░░░│
- floor ┼────────────────────────────▶ speed (log scale, from 1/16×)
-```
+![Speed across, quality up. Existing models form a staircase, and the area under it is already covered. A new entry above the staircase is paid for the six squares of area only it covers.](docs/how-you-win.svg)
 
-**The worked example.** Suppose others' existing models cover 40 units, the maintainers' own models add 10, and three
-contestants add 10 each without overlapping. Others' 40 units earn nothing. New area is 10 + 30 = 40 units for $1000, or $25
-a unit: each contestant gets $250. The maintainers' $250 is never paid to anyone, and that share shrinks as you add more.
+Speed is in multiples of HTDemucs (**×**) on a log scale, and quality is in dB. One unit of area is one doubling of speed times one dB.
+
+**An example.** Suppose existing models from other people cover 40 units, our own models add 10, and three
+contestants add 10 each without overlapping. The first 40 units earn nothing. The other 40 split the $1000 at $25 a unit, so
+each contestant gets $250. Our $250 is never paid to anyone, and that share shrinks as contestants add more.
 
 **What pays is area, so gaps pay best.** What one new entry would earn on today's provisional board:
 
@@ -52,10 +41,9 @@ a unit: each contestant gets $250. The maintainers' $250 is never paid to anyone
 **The chart starts at 1/16× HTDemucs,** so speed under that earns nothing, however clean. The right side has no limit: the chart
 widens to fit the fastest entry.
 
-**Earlier entries keep the area they cover.** Your place in line is the moment your PR first contains a complete entry: a manifest that passes
-`vf validate`, with a URL and sha256 for every file. Changing a file, hash or recipe moves you to the time of that change. Adding or
-updating your results files doesn't. An
-entry earns only the area no earlier entry covers, your own included.
+**Earlier entries keep the area they cover.** An entry earns only the area no earlier entry covers, your own included. Your place
+in line is the moment your PR first contains a complete entry: a manifest that passes `vf validate`, with a URL and sha256 for every
+file. Changing a file, hash or recipe moves you to the time of that change. Adding or updating your results files doesn't.
 
 **Copies earn nothing.** Timing and SDR wobble, so an entry that isn't more than 5% faster or 0.1 dB better than an earlier
 one counts as a copy: it earns nothing and covers nothing. You can build on someone's public weights if you name them in
@@ -74,17 +62,17 @@ uv run vf fetch-reference              # HTDemucs, the 1× reference, which ever
 uv run vf new my-model                 # creates submissions/my-model/ (manifest.yaml, training.txt) and models/my-model/
 # put your ONNX in models/my-model/ and edit the manifest. With one file, delete the fp16 line and point webgpu at fp32
 
-uv run vf preview my-model             # your fork of the site at http://127.0.0.1:8787: your entry on the real board, and what it would earn. Needs fetch-data done
+uv run vf preview my-model             # a local copy of the site at http://127.0.0.1:8787: your entry on the real board, and what it would earn. Needs fetch-data done
 uv run vf quality my-model             # the public score of your native file, which preview uses once it exists
 uv run vf transfer my-model            # if your browser or GPU file differs from your native one: does it still score the same?
 # upload your files, then fill in each url and sha256 (`sha256sum models/my-model/core.onnx`)
-uv run vf validate my-model            # the checks the maintainers run on your PR. It doesn't download your URLs; they do
+uv run vf validate my-model            # the checks we run on your PR. It doesn't download your URLs; we do
 ```
 
 `vf preview` scores your model on 5 clips per set if you haven't run `vf quality`, times it natively, and serves the site with your entry on
-the chart. Run your model on the page, on the CPU and GPU tabs, to add this browser and GPU. It's your hardware and a rough score, so it's
-a preview: official numbers come from the maintainers' devices. Five clips can be half a dB off, so run `vf quality` before trusting what it says you'd earn.
-You can't run `private30`, so preview estimates it from how the other entries' public and private scores compare. Your real Q can move once the maintainers run it.
+the chart. Run your model on the page, on the CPU and GPU tabs, to add timings from this browser and GPU. It's your hardware and a rough score, so it's
+a preview: official numbers come from our devices. Five clips can be half a dB off, so run `vf quality` before trusting what it says you'd earn.
+You can't run `private30`, so preview estimates it from how the other entries' public and private scores compare. Your real score can move once we run it.
 
 **Building on an entry that's already here?** `uv run vf fetch <entry>` downloads the files the site serves into your models folder, at the paths in
 `baselines/<entry>/manifest.yaml`, for example `models/vocft_t512/core.onnx` with its weights beside it in `core.onnx.data`. Your files belong in your
@@ -95,7 +83,7 @@ If your weights are unchanged, you don't need `vf quality`: run `vf transfer my-
 model as that entry's native file: the same graph and weights, however it's stored, so a file rejoined as above counts. Remember that copies earn
 nothing, so this only pays if your entry is faster than that one by more than the margin.
 Some entries run a native file the site doesn't serve: the HTDemucs-lite, HTDemucs-tuned, duality, MelBand Kim and `-mix` entries. `vf transfer` can't
-score their native side for you, so say in your PR which entry you started from and the maintainers run the check.
+score their native side for you, so say in your PR which entry you started from and we'll run the check.
 
 **Settings** are environment variables. `VF_MODELS` is the folder manifest paths start from (`models/` by default), `VF_DATA` holds the sets (`data/`),
 and `VF_CHROME` is your Chromium if it isn't `/usr/bin/chromium`. Commands that time or score take a lock so they don't disturb each other, and wait for
@@ -106,7 +94,7 @@ for small models. A page run saves its progress in `~/.cache/vf-score-progress`,
 
 ### Speed index
 
-Times faster than HTDemucs, end to end. That includes the STFT, the stitching and the iSTFT; it excludes download,
+How many times as fast as HTDemucs, end to end. That includes the STFT, the stitching and the iSTFT; it excludes download,
 session creation and a short warm-up run. Everywhere on the board, **×** means times as fast as HTDemucs. When we mean against the
 song's own length, we write **× realtime**: 2× realtime separates a 4-minute song in 2 minutes.
 
@@ -137,13 +125,13 @@ that's 4× everywhere:
 So a model that runs everywhere usually beats a faster one that doesn't. GPUs also cap single buffers: `voc-ft-qat8` failed
 on Adreno with a 160 MiB binding against a 128 MiB limit, so check your largest tensor.
 
-**1×** is HTDemucs as the Better Lyrics composer runs it, because it's a separator people already ship (this challenge isn't affiliated with Better Lyrics): 25% overlap (`overlap: 1.3333`) on stock ONNX Runtime. That means fp32
-on 4 threads natively, fp32 on **1 thread** in the browser, and fp16 with fp32 ConvTranspose on GPUs, because the fp32 file runs
-out of memory on Vega. They score the same. It's in [`baselines/htdemucs`](baselines/htdemucs/manifest.yaml).
+**1×** is HTDemucs as Better Lyrics Composer runs it, chosen because people already ship it. (This challenge isn't affiliated with Better Lyrics.) That means 25% overlap (`overlap: 1.3333`) on stock ONNX Runtime:
+fp32 on 4 threads natively, fp32 on **1 thread** in the browser, and fp16 with fp32 ConvTranspose on GPUs, because the fp32 file runs
+out of memory on Vega. The two files score the same. It's in [`baselines/htdemucs`](baselines/htdemucs/manifest.yaml).
 
 ### Quality index
 
-Mean SDR in dB over three sets of 50 clips of 30 s, each 44.1 kHz stereo, scored as global SDR per clip, with the chunking
+**Q** is the mean SDR in dB over three sets of 50 clips of 30 s, each 44.1 kHz stereo, scored as global SDR per clip, with the chunking
 your manifest declares. SDR compares your vocal with the real one: 10·log10 of the real vocal's energy over the error's energy,
 over the whole clip. Each extra dB is about a fifth less error energy.
 
@@ -151,18 +139,18 @@ over the whole clip. Each extra dB is about a fifth less error energy.
 |---|---|---|
 | `musdb30` | MUSDB18-HQ test, the most vocal 30 s per track | yes |
 | `cc30` | ccMixter a cappellas under Creative Commons licenses (most of them non-commercial) over MUSDB test accompaniments. Vocals no MUSDB-trained model has seen | yes |
-| `private30` | Produced a cappellas from commercial sample packs over MUSDB test accompaniments | no, the maintainers run it |
+| `private30` | Produced a cappellas from commercial sample packs over MUSDB test accompaniments | no, we run it |
 
-**The floor** is 1 dB under HTDemucs (10.0 dB). Under it, a point earns nothing, however fast.
+**The floor** is 10.0 dB, 1 dB under HTDemucs. Under it, a point earns nothing, however fast.
 
-**Quality must be honest about numerics.** If your manifest uses different files per backend (fp32 natively and fp16 on
+**Your quality is your worst file's.** If your manifest uses different files per backend (fp32 natively and fp16 on
 WebGPU, say), Q is the lowest of them. You score your native file with `vf quality`. For each other file:
 
 - **Same weights** (differing only in runtime, precision, export or stitching): it inherits the native score if it passes the
   **transfer check**. Run through its own pipeline on 8 fixed clips, every clip's SDR has to be within ±0.05 dB of the native file's,
   and their mean within ±0.02 dB. The clips are `PR_-_Happy_Daze` and `Motor_Tapes_-_Shore` from `musdb30`, `c40` and `c17` from `cc30`,
-  and four from `private30`. `vf transfer my-model` runs the ones you have and prints each clip. Passing those is `public-pass`; the
-  maintainers run the private four and record the verdict in `results/transfer/`, along with the hashes of the files and engine it checked.
+  and four from `private30`. `vf transfer my-model` runs the ones you have and prints each clip. Passing those is `public-pass`; we
+  run the private four and record the verdict in `results/transfer/`, along with the hashes of the files and engine it checked.
 - **Fails the check, or different weights:** it's scored in full on the backend it runs on, and Q is the lower of that and native. The
   check errs on the safe side: an fp16 file can fail on one low-SDR clip and still match in full.
 - **Already scored in full in another entry:** if that full score's mean came out no more than 0.02 dB under its native score, the same
@@ -208,7 +196,7 @@ webgpu:  { file: fp16, runtime: webgpu@1.23.0 }
 | `htdemucs` | `input` waveform, `x` spectrogram | `output`, `add_67` branches | HTDemucs, HTDemucs-lite |
 | `mask` | `[1, 2F, frames, 2]` real STFT | complex masks, same shape | RoFormers |
 
-If yours doesn't fit, propose a layout in `vf/hosts.py`, `site/src/layouts.js` and `vf/validate.py`, and the maintainers will review
+If yours doesn't fit, propose a layout in `vf/hosts.py`, `site/src/layouts.js` and `vf/validate.py`, and we'll review
 it. Otherwise a submission is only YAML and ONNX, with no custom ops. Upload one plain ONNX file with its weights inside, and `sha256` pins that file. For the browser the site splits every ONNX file into a graph and a weights file, so the weights stay out of ONNX Runtime's WASM heap. You don't have to do anything for that, and the output is the same.
 
 ### Bring your own engine
@@ -225,27 +213,27 @@ browser: { engine: engine/worker.js, file: fp32, runtime: wasm@1.30.0, threads: 
 webgpu:  { engine: engine/worker.js, file: fp16, runtime: webgpu@1.23.0 }
 ```
 
-[`starter/engine/worker.js`](starter/engine/worker.js) is the stock worker and documents the messages it gets. It's open source under your
-entry's code license, and compiled code needs a `SOURCE.md` that rebuilds it. `vf preview` runs your engine exactly as the site will.
+[`starter/engine/worker.js`](starter/engine/worker.js) is the stock worker and documents the messages it gets. Compiled code needs a
+`SOURCE.md` that rebuilds it. `vf preview` runs your engine exactly as the site will.
 
-- **It runs in a browser worker with no network**, so it can reach this site and nothing else, and the maintainers read it before running it.
+- **It runs in a browser worker that can reach this site and nothing else**, and we read it before running it.
 - **The test clip is disguised**, at a random level and rotated by a random amount, so an engine can't recognize it.
 - **Your engine is public under your entry's code license**, so others can build on it as that license allows. Your entry's place in line stays yours, so being first still pays.
-- **Any non-native file gets checked through your engine** by the maintainers: the transfer check above if it has the same weights, otherwise in full. Q is still the lowest across your files.
-- **Native stays ONNX Runtime or OpenVINO.** That's code on the maintainers' own machine, and it's already fast.
-- **The 1× reference and the starting board stay on stock runtimes**, so 1× doesn't move and old entries don't gain by themselves. The exceptions are MelBand Kim's WebGPU recipes (`melband-kim` and `melband-kim-o1`), which mirror how Better Lyrics Composer runs it, as a chain of 14 sessions. Engines by the maintainers are their own entries, such as `melband-kim-wasm`.
+- **Any non-native file gets checked through your engine** by us: the transfer check above if it has the same weights, otherwise in full. Q is still the lowest across your files.
+- **Native stays ONNX Runtime or OpenVINO.** That's code on our own machine, and it's already fast.
+- **The 1× reference and the starting board stay on stock runtimes**, so 1× doesn't move and old entries don't gain by themselves. The exceptions are MelBand Kim's WebGPU recipes (`melband-kim` and `melband-kim-o1`), which mirror how Better Lyrics Composer runs it, as a chain of 14 sessions. Our own engines are separate entries, such as `melband-kim-wasm`.
 
 ## How entries get scored
 
 1. Your PR passes `vf validate` and commits `results/quality/<name>.json`, which `vf quality` writes, and `results/transfer/<name>.*.json` if you ran `vf transfer`.
-2. The maintainers run `private30` and spot-check 10 public clips. If their mean differs from yours by over 0.05 dB in either
-   direction, your score gets recomputed in full. The board uses the maintainers' numbers whenever they've computed them.
+2. We run `private30` and spot-check 10 public clips. If our mean differs from yours by over 0.05 dB in either
+   direction, your score gets recomputed in full. The board uses our numbers whenever we've computed them.
 3. Device runs happen in batches on the six setups, plugged in, about every 3 days and in a last batch after the deadline. Your own speed
    numbers don't count: speed is measured on the same hardware for everyone, interleaved with HTDemucs.
 4. The board updates, including what you'd be paid if it ended now.
 
 Up to **5 live entries** per person, because every entry takes real time on real devices. One person gets one set of entries,
-and the maintainers can merge accounts. You can replace an entry at any time: the replacement queues at its own time, and its old
+and we can merge accounts. You can replace an entry at any time: the replacement queues at its own time, and its old
 area is freed for later entries. Entries must be complete by the deadline: 8 pm Pacific, November 21, 2026.
 
 ## Rules
@@ -253,10 +241,10 @@ area is freed for later entries. Entries must be complete by the deadline: 8 pm 
 - **Don't train or tune on** MUSDB18-HQ test, the cc30 takes or anything by their uploaders (listed in
   [`tools/data/ccmixter_takes.json`](tools/data/ccmixter_takes.json)), or vocals from commercial sample packs. Publish your
   training list in `training.txt`. Other data and any teacher model are fine.
-- **A model that's better on the public sets than `private30` can explain** gets a closer look. Maintainers may ask how it
-  was trained and can exclude an entry they believe broke the data rule.
+- **A model that's better on the public sets than `private30` can explain** gets a closer look. We may ask how it
+  was trained and can exclude an entry we believe broke the data rule.
 - **License:** what you publish (your weights and code) must be permissive: `MIT`, `Apache-2.0`, `BSD-2-Clause`, `BSD-3-Clause`, `ISC`, `MPL-2.0`, `CC0-1.0`, `CC-BY-4.0`, `Unlicense` or `Zlib`, written exactly so.
-  Beyond the list above we don't police what your data was licensed under, since that's how nearly every model in this field is made. If you start from
+  Beyond the data rule above, we don't police what your data was licensed under, since that's how nearly every model in this field is made. If you start from
   weights without a clear license, say so under `license.upstream`. Two common ones: UVR's README asks developers using its models to "honor the MIT license by
   providing credit to UVR and its developers", and hasn't answered questions about whether that covers Voc_FT's weights. Kim Vocal 2 has no license of its own that we could find.
   Weights under an explicit non-commercial or strong copyleft license (GPL, AGPL) aren't eligible. Your license covers your own work; whatever
@@ -266,8 +254,8 @@ area is freed for later entries. Entries must be complete by the deadline: 8 pm 
 
 ## Prizes
 
-- The pot is up to $1000 in USDC on Base. Contestants split it by area as above when the challenge ends; the share for area the
-  maintainers' own models add isn't paid out, and it shrinks as contestants add more.
+- The pot is up to $1000 in USDC on Base. Contestants split it by area as above when the challenge ends; the share for area our
+  own models add isn't paid out, and it shrinks as contestants add more.
 - Amounts under $1 aren't sent. Payment goes to the wallet in your manifest within two weeks of the final board.
 - The wallet is a `0x` address on Base, a network that runs on Ethereum. Any self-custody wallet that supports Base gives you one.
   Use one you control: an exchange deposit address may not accept USDC on Base, and a payment sent there can't be undone.
@@ -276,12 +264,12 @@ area is freed for later entries. Entries must be complete by the deadline: 8 pm 
   We can't pay anyone we're legally barred from paying, such as people on sanctions lists.
 - The maintainer, @KTibow, decides scoring and eligibility, and explains each decision in the PR. Bugs in the harness get
   fixed and everything is rescored, up to the final board; nobody loses a place in line for that.
-- Maintainers can enter new models after the start. They queue by time like everyone else's, are never paid, and are marked on the board. Only the starting board comes first.
+- We can enter new models after the start. They queue by time like everyone else's, are never paid, and are marked on the board. Only the starting board comes first.
 
 ## What's already been tried
 
 [`TIPS.md`](TIPS.md) has what we learned getting here, including what didn't work. [`starter/`](starter/) has the training code behind
-the maintainers' entries: teacher labels, distillation, QAT, MDX fine-tuning. It's reference code; expect to edit paths.
+our entries: teacher labels, distillation, QAT, MDX fine-tuning. It's reference code; expect to edit paths.
 
 ## License
 
