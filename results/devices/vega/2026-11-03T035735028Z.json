@@ -1,0 +1,55 @@
+{
+ "device": "vega",
+ "backend": "webgpu",
+ "official": true,
+ "onBattery": false,
+ "date": "2026-11-03T03:57:35.028Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": true,
+  "reason": "",
+  "vendor": "amd",
+  "architecture": "gcn-5",
+  "description": "",
+  "f16": true,
+  "maxBuffer": 4294967292,
+  "maxStorageBuffers": 16,
+  "maxBinding": 4294967292
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": 1.6987,
+   "runs": [
+    1.747,
+    1.652
+   ],
+   "sdr": 7.74,
+   "loadMs": 4380,
+   "warmMs": 4427,
+   "pending": false
+  },
+  "melband-kim-o1": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "the tab crashed or ran out of memory",
+   "pending": false
+  },
+  "melband-kim": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "the tab crashed or ran out of memory",
+   "pending": false
+  }
+ }
+}

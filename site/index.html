@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vocal Frontier</title>
+<meta name="description" content="Up to $1000 for pushing the speed and quality frontier of vocal separation, on CPUs and GPUs people actually own.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vocal Frontier">
+<meta property="og:title" content="Vocal Frontier: up to $1000 for faster, cleaner vocal separation">
+<meta property="og:description" content="An open challenge to push the speed and quality frontier of vocal separation, on CPUs and GPUs people actually own. Prize money follows the new area you add.">
+<meta property="og:url" content="https://vocal-frontier.kendell.dev/">
+<meta property="og:image" content="https://vocal-frontier.kendell.dev/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Vocal Frontier chart: a staircase of existing models, with speed across and quality up.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M1 15V3h5v3h5v3h4v6z' fill='%23df8428'/%3E%3C/svg%3E">
+<script>
+// A run in progress reloads between models. Stay hidden until app.js has put the progress bar back where it was (with a fallback, so a failure can't leave the page blank).
+try { if (localStorage.getItem("vf-queue")) { history.scrollRestoration = "manual"; const c = document.documentElement.classList; c.add("resuming"); setTimeout(() => c.remove("resuming"), 4000); } } catch {}
+</script>
+<link rel="preload" href="fonts/bricolage-400_800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="stage" id="board">
+  <div class="story">
+    <header class="hero step" data-scene="">
+  <h1>Vocal Frontier</h1>
+  <p class="lede">Make vocal separation faster at a given quality, or cleaner at a given speed, than anything on this chart. Prize money follows the new area you add to the frontier, wherever you add it. The pot is up to $1000 in USDC, <span id="deadline"></span>.</p>
+  <nav class="jump"><a href="#board">The board</a><a href="#bench">Test this device</a><a href="#score">How scoring works</a><a id="repo-link" hidden href="#">Enter on GitHub</a></nav>
+</header>
+    <div class="step" data-scene="">
+      <h2>The board</h2>
+      <p id="board-status" class="muted"></p>
+      <div id="preview" class="preview" hidden></div>
+    </div>
+    <article class="step" id="score" data-scene="speed"><h3>Across: speed</h3>
+      <p class="formula">S = √(CPU × GPU)</p>
+      <p>Times faster than <b>HTDemucs</b>, end to end, on a full clip including the STFT. Half is CPU, half is GPU, each a geometric mean of its devices.</p>
+      <div class="weights" id="weights"></div>
+      <p class="muted">Native and browser run on a Ryzen 5 3501U mini PC, Vega 8 is its GPU, Adreno X1 a Snapdragon X Elite laptop, Mali Valhall a Nothing phone, and Gen12LP an Intel ChromeOS laptop.</p>
+      <p>Fail on a device, or run slower than <b>0.05×</b> there, and that device scores 0.05×. Failing one GPU takes a model that's 4× everywhere else down to 2.31×. Failing the browser takes it down to 1.34×.</p></article>
+    <article class="step" data-scene="quality"><h3>Up: quality</h3>
+      <p class="formula">Q = mean SDR, dB</p>
+      <p>Mean of three sets of 50 clips of 30 s: <b>musdb30</b> and <b>cc30</b>, both public and rebuildable, and <b>private30</b>, which only the maintainers can run. An entry more than 1 dB below HTDemucs (under 10.0 dB) earns nothing.</p>
+      <p>Each device's output also has to match the native output on a public test clip, within 0.5 dB. Fast and wrong counts as a failure.</p></article>
+    <article class="step" data-scene="money"><h3>The money: area</h3>
+      <p class="formula">$ ∝ new area</p>
+      <p>One unit is one doubling of speed times one dB. Your points earn the area that nobody before you covers, in order of submission. Anything not more than 5% faster or 0.1 dB better than an earlier entry counts as a copy and earns nothing. The chart starts at 1/16× HTDemucs, so speed under that earns nothing.</p>
+      <p id="example"></p>
+      <p>The pot divides over all new area, including what the maintainers' own models added. That share is never paid out, and it shrinks the more you add.</p></article>
+    <div class="step" data-scene="frontier">
+      <h3>What's left to win</h3>
+      <p>The line along the top is the frontier. Anything under it is already covered, so the gaps in it are where the money is.</p>
+      <div class="pot" id="pot"></div>
+    </div>
+  </div>
+  <div class="graphic">
+    <div class="chart-card">
+      <div id="legend" class="legend"></div>
+      <div id="chart" class="chart" role="img" aria-label="Speed against quality for every entry. The table below has the same data."></div>
+      <div id="tip" class="tip" hidden></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+<section id="entries">
+    <details class="table-wrap" open><summary>All entries</summary><div class="scroll"><table id="board-table"></table></div></details>
+</section>
+
+<section id="bench">
+  <div class="sec-head"><h2>Test this device</h2><p class="muted">Runs in this tab. Nothing leaves your device unless you copy it out.</p></div>
+  <div class="device" id="device"></div>
+  <div class="tabs" role="tablist" aria-label="What to run on">
+    <button role="tab" id="tab-webgpu" aria-selected="true">GPU (WebGPU)</button>
+    <button role="tab" id="tab-browser" aria-selected="false">CPU (WASM)</button>
+  </div>
+  <div id="model-list" class="models"></div>
+  <div class="actions">
+    <button id="run" class="primary">Run</button>
+    <span id="run-note" class="muted"></span>
+  </div>
+  <p id="power-note" class="muted" hidden></p>
+  <div id="progress" class="progress" hidden><div class="bar"><i></i></div><span id="progress-text"></span></div>
+  <div class="scroll"><table id="results" hidden></table></div>
+  <div class="actions" id="result-actions" hidden>
+    <button id="copy">Copy results as JSON</button>
+    <button id="download">Download</button>
+    <a id="issue" hidden target="_blank" rel="noopener">Report on GitHub</a>
+    <span id="official-note" class="muted"></span>
+  </div>
+  <div id="listen" class="listen" hidden>
+    <h3>Listen</h3>
+    <p class="muted" id="listen-title"></p>
+    <div class="ab" role="group" aria-label="What to play"><button data-track="mix">Song</button><button data-track="vocals">Vocals</button><button data-track="inst">Instrumental</button><button data-track="truth">True vocals</button><button data-stop>Stop</button></div>
+    <canvas id="wave" height="90"></canvas>
+    <p class="muted credit" id="credits"></p>
+  </div>
+</section>
+
+</main>
+<footer class="wrap muted"><p id="foot"></p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

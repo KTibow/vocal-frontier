@@ -1,0 +1,32 @@
+{
+ "device": "native",
+ "date": "2026-11-02T16:28:34Z",
+ "cpu": "AMD Ryzen 5 3501U with Radeon Vega Mobile Gfx",
+ "cpus": "0,2,4,6",
+ "models": {
+  "htdemucs": {
+   "xrt": 0.8631,
+   "runs": [
+    34.58,
+    34.93
+   ],
+   "sdr": 7.74
+  },
+  "duality-teacher": {
+   "xrt": 0.0876,
+   "runs": [
+    375.1,
+    312.95
+   ],
+   "sdr": 8.291
+  },
+  "melband-kim-o1": {
+   "xrt": 0.2567,
+   "runs": [
+    118.03,
+    115.71
+   ],
+   "sdr": 8.277
+  }
+ }
+}

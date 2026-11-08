@@ -1,0 +1,13 @@
+title: Kim Vocal 2
+kind: baseline
+author: Kimberley Jensen
+license: { weights: unstated, code: MIT }
+description: The MDX-Net vocal model many tools default to, at overlap 2.
+layout: { type: mdx, n_fft: 7680, hop: 1024, dim_f: 3072, dim_t: 256, compensate: 1.009 }
+overlap: 2
+files:
+  fp32: { path: Kim_Vocal_2.onnx }
+  fp16: { path: kimv2_f16/core.onnx }
+native: { file: fp32, runtime: openvino, processes: 2, threads: 2 }
+browser: { file: fp32, runtime: wasm@1.30.0, workers: 1, threads: 4 }
+webgpu: { file: fp16, runtime: webgpu@1.23.0 }

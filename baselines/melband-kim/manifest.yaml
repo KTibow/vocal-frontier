@@ -1,0 +1,12 @@
+title: MelBand Kim
+kind: baseline
+author: Kimberley Jensen
+license: { weights: MIT, code: MIT }
+description: "The quality end of the frontier, set up as Better Lyrics Composer runs it since PR #461 (merge commit b48f7921): 2 overlaps, and on WebGPU fp16 with RMSNorm in fp32, as 14 graphs in separate sessions with a wait on the GPU after each. That chain is itself a custom setup, not one stock session. No browser recipe, as there. Native is stock ONNX Runtime, 1 process, 4 threads, as for the HTDemucs reference. Rebuilt from those settings, not from Composer's files. Composer's last batch of chunks loses its fade-out; here only the last chunk does. Composer also moves its STFT work into two extra workers; here it stays in the one, which matters little on a GPU this slow. Its score is the native file's. The WebGPU file came within 0.08 dB of it on 8 clips, a shade over the 0.05 dB limit on one. melband-kim-wasm runs the same file and engine and was scored in full, and held up, which clears it here."
+layout: { type: mask, n_fft: 2048, hop: 441, frames: 801 }
+overlap: 2
+files:
+  fp32: { path: melkim/core.onnx }
+  stages: { path: melkim_stages_gpu/stages.bin }
+native: { file: fp32, runtime: onnxruntime, processes: 1, threads: 4 }
+webgpu: { engine: engine/worker.js, file: stages, runtime: webgpu@1.30.0 }

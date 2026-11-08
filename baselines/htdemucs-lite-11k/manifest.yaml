@@ -1,0 +1,15 @@
+title: HTDemucs-lite-11k
+kind: ours
+author: the maintainers
+license: { weights: MIT, code: MIT }
+description: >
+  HTDemucs with the spectral branch cut at 11 kHz, a half-rate transformer and spectrogram-only output, self-distilled.
+training: { data: "teacher-labelled song excerpts plus CC BY / CC0 a cappellas", teacher: HTDemucs }
+layout: { type: htdemucs }
+overlap: 1
+files:
+  fp32: { path: htdemucs_sdBby5000/core.onnx }
+  fp16: { path: htdemucs_sdBby5000_f16/core.onnx }
+native: { file: fp32, runtime: openvino, processes: 4, threads: 1 }
+browser: { file: fp16, runtime: wasm@1.23.0, workers: 1, threads: 4 }
+webgpu: { file: fp16, runtime: webgpu@1.23.0 }

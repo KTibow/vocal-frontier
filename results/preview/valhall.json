@@ -1,0 +1,42 @@
+{
+ "device": "valhall",
+ "date": "2026-11-02T05:22:26Z",
+ "models": {
+  "htdemucs": {
+   "xrt": 0.6897,
+   "sdr": 7.74
+  },
+  "duality-student": {
+   "xrt": 0.5479,
+   "sdr": 8.08
+  },
+  "htdemucs-lite-11k": {
+   "xrt": 2.1741,
+   "sdr": 7.626
+  },
+  "htdemucs-tuned": {
+   "xrt": 1.0299,
+   "sdr": 7.74
+  },
+  "kim-vocal-2": {
+   "xrt": 0.3823,
+   "sdr": 8.173
+  },
+  "voc-ft": {
+   "xrt": 0.3834,
+   "sdr": 8.167
+  },
+  "voc-ft-o1": {
+   "xrt": 0.778,
+   "sdr": 8.139
+  },
+  "voc-ft-p55": {
+   "xrt": 1.1776,
+   "sdr": 7.921
+  },
+  "voc-ft-qat8": {
+   "xrt": 0.3027,
+   "sdr": 8.095
+  }
+ }
+}

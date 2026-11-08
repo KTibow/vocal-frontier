@@ -1,0 +1,133 @@
+{
+ "device": "vega",
+ "backend": "webgpu",
+ "official": true,
+ "date": "2026-11-02T09:10:03.693Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": true,
+  "reason": "",
+  "vendor": "amd",
+  "architecture": "gcn-5",
+  "description": "",
+  "f16": true,
+  "maxBuffer": 4294967292,
+  "maxStorageBuffers": 16,
+  "maxBinding": 4294967292
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": 1.7633,
+   "runs": [
+    1.753,
+    1.774
+   ],
+   "sdr": 7.74,
+   "loadMs": 4424,
+   "warmMs": 4405,
+   "pending": false
+  },
+  "htdemucs-tuned": {
+   "xrt": 2.6235,
+   "runs": [
+    2.62,
+    2.627
+   ],
+   "sdr": 7.74,
+   "loadMs": 3693,
+   "warmMs": 4124,
+   "pending": false
+  },
+  "htdemucs-lite-11k": {
+   "xrt": 6.0013,
+   "runs": [
+    5.975,
+    6.028
+   ],
+   "sdr": 7.626,
+   "loadMs": 3725,
+   "warmMs": 1971,
+   "pending": false
+  },
+  "voc-ft": {
+   "xrt": 0.942,
+   "runs": [
+    0.945,
+    0.939
+   ],
+   "sdr": 8.167,
+   "loadMs": 2331,
+   "warmMs": 3294,
+   "pending": false
+  },
+  "voc-ft-o1": {
+   "xrt": 1.8829,
+   "runs": [
+    1.875,
+    1.891
+   ],
+   "sdr": 8.139,
+   "loadMs": 2753,
+   "warmMs": 3517,
+   "pending": false
+  },
+  "voc-ft-p55": {
+   "xrt": 2.7114,
+   "runs": [
+    2.712,
+    2.711
+   ],
+   "sdr": 7.921,
+   "loadMs": 2451,
+   "warmMs": 2377,
+   "pending": false
+  },
+  "voc-ft-qat8": {
+   "xrt": null,
+   "runs": [
+    null,
+    0.452
+   ],
+   "sdr": 8.093,
+   "loadMs": 2463,
+   "warmMs": 13775,
+   "error": "47303520",
+   "pending": false
+  },
+  "kim-vocal-2": {
+   "xrt": 0.9426,
+   "runs": [
+    0.942,
+    0.943
+   ],
+   "sdr": 8.173,
+   "loadMs": 2453,
+   "warmMs": 3263,
+   "pending": false
+  },
+  "duality-student": {
+   "xrt": 1.9638,
+   "runs": [
+    1.969,
+    1.959
+   ],
+   "sdr": 8.079,
+   "loadMs": 5102,
+   "warmMs": 5986,
+   "pending": false
+  },
+  "melband-kim": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "no webgpu recipe",
+   "pending": false
+  }
+ }
+}

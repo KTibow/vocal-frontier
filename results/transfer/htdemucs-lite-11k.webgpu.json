@@ -1,0 +1,42 @@
+{
+ "variant": "htdemucs-lite-11k",
+ "backend": "webgpu",
+ "parent": "htdemucs-lite-11k",
+ "parent_runtime": "openvino",
+ "overlap": 1,
+ "verdict": "pass",
+ "max_abs_delta": 0.0211,
+ "mean_delta": 0.0022,
+ "date": "2026-11-04",
+ "files": {
+  "file": "59dc85148f1239db0cdb448843f8f9b2b261ed2523b05268a9e11a8c61a54911",
+  "engine": null,
+  "against": "af93545941661522dd097b4867cc76026f35a237c54d2ce7ad7ad78490cb2244"
+ },
+ "clips": {
+  "musdb30/PR_-_Happy_Daze": {
+   "parent": 3.0901,
+   "variant": 3.1111997656724917,
+   "delta": 0.0211
+  },
+  "musdb30/Motor_Tapes_-_Shore": {
+   "parent": 1.5031,
+   "variant": 1.502841008027361,
+   "delta": -0.0003
+  },
+  "cc30/c40": {
+   "parent": 5.1313,
+   "variant": 5.131132169907227,
+   "delta": -0.0002
+  },
+  "cc30/c17": {
+   "parent": 8.0431,
+   "variant": 8.044201522053541,
+   "delta": 0.0011
+  }
+ },
+ "private30_clips": {
+  "count": 4,
+  "max_abs_delta": 0.0145
+ }
+}

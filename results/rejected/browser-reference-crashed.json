@@ -1,0 +1,50 @@
+{
+ "device": "browser",
+ "backend": "browser",
+ "official": true,
+ "date": "2026-11-02T15:28:38.514Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": false,
+  "reason": "no WebGPU adapter"
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": null,
+   "runs": [
+    0.294,
+    null
+   ],
+   "sdr": 7.74,
+   "loadMs": 2697,
+   "warmMs": 17857,
+   "error": "the tab crashed or ran out of memory",
+   "pending": false
+  },
+  "voc-ft-p70-mix": {
+   "xrt": 0.722,
+   "runs": [
+    0.726,
+    0.718
+   ],
+   "sdr": 8.011,
+   "loadMs": 627,
+   "warmMs": 10333,
+   "pending": false
+  },
+  "voc-ft-p55-mix": {
+   "xrt": 0.8366,
+   "runs": [
+    0.824,
+    0.849
+   ],
+   "sdr": 7.891,
+   "loadMs": 548,
+   "warmMs": 8978,
+   "pending": false
+  }
+ }
+}

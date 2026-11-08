@@ -1,0 +1,72 @@
+{
+ "device": "browser",
+ "backend": "browser",
+ "official": true,
+ "date": "2026-11-02T19:47:23.312Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": false,
+  "reason": "no WebGPU adapter"
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": null,
+   "runs": [
+    null,
+    0.299
+   ],
+   "sdr": 7.74,
+   "loadMs": 1247,
+   "warmMs": 17830,
+   "error": "the tab crashed or ran out of memory",
+   "pending": false
+  },
+  "voc-ft": {
+   "xrt": 0.2311,
+   "runs": [
+    0.233,
+    0.229
+   ],
+   "sdr": 8.168,
+   "loadMs": 820,
+   "warmMs": 17620,
+   "pending": false
+  },
+  "kim-vocal-2": {
+   "xrt": 0.234,
+   "runs": [
+    0.236,
+    0.232
+   ],
+   "sdr": 8.173,
+   "loadMs": 611,
+   "warmMs": 11324,
+   "pending": false
+  },
+  "voc-ft-o1": {
+   "xrt": 0.471,
+   "runs": [
+    0.476,
+    0.466
+   ],
+   "sdr": 8.14,
+   "loadMs": 640,
+   "warmMs": 11298,
+   "pending": false
+  },
+  "kim-vocal-2-o1": {
+   "xrt": 0.4574,
+   "runs": [
+    0.459,
+    0.456
+   ],
+   "sdr": 8.146,
+   "loadMs": 546,
+   "warmMs": 11341,
+   "pending": false
+  }
+ }
+}

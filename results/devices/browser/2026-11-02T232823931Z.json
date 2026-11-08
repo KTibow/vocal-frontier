@@ -1,0 +1,94 @@
+{
+ "device": "browser",
+ "backend": "browser",
+ "official": true,
+ "onBattery": false,
+ "date": "2026-11-02T23:28:23.931Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": false,
+  "reason": "no WebGPU adapter"
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": 0.2974,
+   "runs": [
+    0.298,
+    0.297
+   ],
+   "sdr": 7.74,
+   "loadMs": 1927,
+   "warmMs": 17625,
+   "pending": false
+  },
+  "voc-ft-o175": {
+   "xrt": 0.2763,
+   "runs": [
+    0.28,
+    0.273
+   ],
+   "sdr": 8.156,
+   "loadMs": 659,
+   "warmMs": 11265,
+   "pending": false
+  },
+  "voc-ft-o15": {
+   "xrt": 0.2949,
+   "runs": [
+    0.298,
+    0.291
+   ],
+   "sdr": 8.147,
+   "loadMs": 473,
+   "warmMs": 11456,
+   "pending": false
+  },
+  "voc-ft": {
+   "xrt": 0.2238,
+   "runs": [
+    0.223,
+    0.225
+   ],
+   "sdr": 8.168,
+   "loadMs": 517,
+   "warmMs": 11649,
+   "pending": false
+  },
+  "voc-ft-o1": {
+   "xrt": 0.4428,
+   "runs": [
+    0.447,
+    0.439
+   ],
+   "sdr": 8.14,
+   "loadMs": 488,
+   "warmMs": 12434,
+   "pending": false
+  },
+  "kim-vocal-2": {
+   "xrt": 0.2214,
+   "runs": [
+    0.22,
+    0.223
+   ],
+   "sdr": 8.173,
+   "loadMs": 494,
+   "warmMs": 11645,
+   "pending": false
+  },
+  "kim-vocal-2-o1": {
+   "xrt": 0.4479,
+   "runs": [
+    0.45,
+    0.446
+   ],
+   "sdr": 8.146,
+   "loadMs": 484,
+   "warmMs": 11970,
+   "pending": false
+  }
+ }
+}

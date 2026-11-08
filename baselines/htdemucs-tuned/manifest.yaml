@@ -1,0 +1,13 @@
+title: HTDemucs, tuned
+kind: tuned
+author: Meta; runtime tuning by the maintainers
+license: { weights: MIT, code: MIT }
+description: The same weights without overlap, on the fastest stock runtime per device. What tuning alone buys.
+layout: { type: htdemucs }
+overlap: 1
+files:
+  fp32: { path: htdemucs/htdemucs_fp32.onnx }
+  fp16: { path: htdemucs_f16t/core.onnx }
+native: { file: fp32, runtime: openvino, processes: 4, threads: 1 }
+browser: { file: fp16, runtime: wasm@1.30.0, workers: 1, threads: 4 }
+webgpu: { file: fp16, runtime: webgpu@1.23.0 }

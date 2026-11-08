@@ -1,0 +1,14 @@
+title: Voc_FT at 85% compute
+kind: ours
+author: the maintainers
+license: { weights: "from Voc_FT, MIT per UVR's README, unconfirmed", code: MIT }
+description: Voc_FT pruned to 85.6% of its compute and self-distilled, no overlap, in chunks twice as long as usual (dim_t 512).
+training: { data: "teacher-labelled song excerpts", teacher: Voc_FT }
+layout: { type: mdx, n_fft: 7680, hop: 1024, dim_f: 3072, dim_t: 512, compensate: 1.021 }
+overlap: 1
+files:
+  fp32: { path: vocft_p85_t512/core.onnx }
+  fp16: { path: vocft_p85_f16_t512/core.onnx }
+native: { file: fp32, runtime: onnxruntime, processes: 1, threads: 4 }
+browser: { file: fp32, runtime: wasm@1.30.0, workers: 1, threads: 4 }
+webgpu: { file: fp16, runtime: webgpu@1.23.0 }

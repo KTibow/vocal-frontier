@@ -1,0 +1,16 @@
+title: HTDemucs
+kind: baseline
+role: reference            # this is 1x on every device, and its quality sets the floor
+author: Meta (facebookresearch/demucs); ONNX export sevagh/demucs.onnx
+license: { weights: MIT, code: MIT }
+description: >
+  Better Lyrics composer's setup: its fp32 file at 25% overlap. On WebGPU that file runs out of memory on the Vega iGPU,
+  so every GPU device uses the same weights in fp16 with fp32 ConvTranspose (same quality, checked on 8 clips).
+layout: { type: htdemucs }
+overlap: 1.3333
+files:
+  fp32: { path: htdemucs/htdemucs_fp32.onnx }
+  fp16: { path: htdemucs_f16t/core.onnx }
+native: { file: fp32, runtime: onnxruntime, processes: 1, threads: 4 }
+browser: { file: fp32, runtime: wasm@1.30.0, workers: 1, threads: 1 }
+webgpu: { file: fp16, runtime: webgpu@1.23.0 }

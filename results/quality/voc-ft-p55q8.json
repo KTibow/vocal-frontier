@@ -1,0 +1,17 @@
+{
+ "sets": {
+  "musdb30": {
+   "mean": 9.972,
+   "clips": 50
+  },
+  "cc30": {
+   "mean": 13.859,
+   "clips": 50
+  },
+  "private30": {
+   "mean": 10.075,
+   "clips": 50
+  }
+ },
+ "source": "imported from the maintainers' bench; ONNX Runtime, the lower of its two CPU runtimes"
+}

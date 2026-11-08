@@ -1,0 +1,13 @@
+title: Musetric duality student
+kind: baseline
+author: musetric
+license: { weights: Apache-2.0, code: Apache-2.0 }
+description: A pooled RoFormer student. Its cc30 score is estimated, because it trained on some cc30 takes.
+layout: { type: mask, n_fft: 2048, hop: 441, frames: 1100 }
+overlap: 1
+files:
+  fp32: { path: duality_student/duality_student_core_t1100.onnx }
+  fp16: { path: duality_student_f16/core.onnx }
+native: { file: fp32, runtime: openvino, processes: 1, threads: 4 }
+browser: { file: fp16, runtime: wasm@1.30.0, workers: 1, threads: 4 }
+webgpu: { file: fp16, runtime: webgpu@1.30.0 }

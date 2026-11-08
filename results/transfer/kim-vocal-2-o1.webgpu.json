@@ -1,0 +1,42 @@
+{
+ "variant": "kim-vocal-2-o1",
+ "backend": "webgpu",
+ "parent": "kim-vocal-2-o1",
+ "parent_runtime": "openvino",
+ "overlap": 1,
+ "verdict": "fail",
+ "max_abs_delta": 0.1299,
+ "mean_delta": -0.0169,
+ "date": "2026-11-06",
+ "files": {
+  "file": "4f5fd16a52620e0b543aeb4c1d4218dc39ace27e18e2fcd0a951cc92ef5d8d8b",
+  "engine": null,
+  "against": "4dd2a1b07821004de99f6d282bd9d9363c3db93f245581f374ce3c81a2a90f87"
+ },
+ "clips": {
+  "musdb30/PR_-_Happy_Daze": {
+   "parent": -1.9397,
+   "variant": -1.9030319475319,
+   "delta": 0.0367
+  },
+  "musdb30/Motor_Tapes_-_Shore": {
+   "parent": 3.9509,
+   "variant": 3.9671622736690484,
+   "delta": 0.0163
+  },
+  "cc30/c40": {
+   "parent": 10.5407,
+   "variant": 10.544915871616967,
+   "delta": 0.0042
+  },
+  "cc30/c17": {
+   "parent": 10.4181,
+   "variant": 10.41535878676875,
+   "delta": -0.0027
+  }
+ },
+ "private30_clips": {
+  "count": 4,
+  "max_abs_delta": 0.1299
+ }
+}

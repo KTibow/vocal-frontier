@@ -1,0 +1,42 @@
+{
+ "variant": "voc-ft-p70-mix",
+ "backend": "browser",
+ "parent": "voc-ft-p70-mix",
+ "parent_runtime": "onnxruntime",
+ "overlap": 1,
+ "verdict": "fail",
+ "max_abs_delta": 0.1492,
+ "mean_delta": 0.0115,
+ "date": "2026-11-06",
+ "files": {
+  "file": "e5b15abd8ce02f4fdec4b41088d1bfb789e148ccd1aecc5d3337fdd89863916d",
+  "engine": null,
+  "against": "e5b15abd8ce02f4fdec4b41088d1bfb789e148ccd1aecc5d3337fdd89863916d"
+ },
+ "clips": {
+  "musdb30/PR_-_Happy_Daze": {
+   "parent": -1.6496,
+   "variant": -1.7987818076721187,
+   "delta": -0.1492
+  },
+  "musdb30/Motor_Tapes_-_Shore": {
+   "parent": -1.3551,
+   "variant": -1.3740355255171273,
+   "delta": -0.0189
+  },
+  "cc30/c40": {
+   "parent": 3.6499,
+   "variant": 3.691765075660615,
+   "delta": 0.0419
+  },
+  "cc30/c17": {
+   "parent": 9.2289,
+   "variant": 9.241301923782023,
+   "delta": 0.0124
+  }
+ },
+ "private30_clips": {
+  "count": 4,
+  "max_abs_delta": 0.1074
+ }
+}

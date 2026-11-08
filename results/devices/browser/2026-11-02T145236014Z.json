@@ -1,0 +1,191 @@
+{
+ "device": "browser",
+ "backend": "browser",
+ "official": true,
+ "date": "2026-11-02T14:52:36.014Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": false,
+  "reason": "no WebGPU adapter"
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": 0.294,
+   "runs": [
+    0.296,
+    0.292
+   ],
+   "sdr": 7.74,
+   "loadMs": 1772,
+   "warmMs": 19251,
+   "pending": false
+  },
+  "htdemucs-tuned": {
+   "xrt": 0.8877,
+   "runs": [
+    0.92,
+    0.856
+   ],
+   "sdr": 7.74,
+   "loadMs": 1730,
+   "warmMs": 9300,
+   "pending": false
+  },
+  "htdemucs-lite-11k": {
+   "xrt": 2.3716,
+   "runs": [
+    2.463,
+    2.283
+   ],
+   "sdr": 7.626,
+   "loadMs": 2374,
+   "warmMs": 3974,
+   "pending": false
+  },
+  "htdemucs-lite-8k": {
+   "xrt": 2.8925,
+   "runs": [
+    2.968,
+    2.819
+   ],
+   "sdr": 7.516,
+   "loadMs": 1291,
+   "warmMs": 2637,
+   "pending": false
+  },
+  "voc-ft": {
+   "xrt": 0.1953,
+   "runs": [
+    0.221,
+    0.173
+   ],
+   "sdr": 8.168,
+   "loadMs": 576,
+   "warmMs": 11907,
+   "pending": false
+  },
+  "voc-ft-o1": {
+   "xrt": 0.4471,
+   "runs": [
+    0.451,
+    0.443
+   ],
+   "sdr": 8.14,
+   "loadMs": 562,
+   "warmMs": 11661,
+   "pending": false
+  },
+  "voc-ft-p55": {
+   "xrt": 0.7467,
+   "runs": [
+    0.74,
+    0.753
+   ],
+   "sdr": 7.921,
+   "loadMs": 521,
+   "warmMs": 7363,
+   "pending": false
+  },
+  "voc-ft-p55q8": {
+   "xrt": 0.8259,
+   "runs": [
+    0.825,
+    0.827
+   ],
+   "sdr": 7.891,
+   "loadMs": 532,
+   "warmMs": 9015,
+   "pending": false
+  },
+  "voc-ft-p70": {
+   "xrt": 0.6125,
+   "runs": [
+    0.619,
+    0.606
+   ],
+   "sdr": 8.053,
+   "loadMs": 610,
+   "warmMs": 8509,
+   "pending": false
+  },
+  "voc-ft-p70q8": {
+   "xrt": 0.7037,
+   "runs": [
+    0.706,
+    0.702
+   ],
+   "sdr": 8.011,
+   "loadMs": 514,
+   "warmMs": 10384,
+   "pending": false
+  },
+  "voc-ft-p85": {
+   "xrt": 0.5179,
+   "runs": [
+    0.519,
+    0.517
+   ],
+   "sdr": 8.073,
+   "loadMs": 473,
+   "warmMs": 9984,
+   "pending": false
+  },
+  "voc-ft-p85q8": {
+   "xrt": 0.5971,
+   "runs": [
+    0.598,
+    0.596
+   ],
+   "sdr": 8.054,
+   "loadMs": 476,
+   "warmMs": 8835,
+   "pending": false
+  },
+  "voc-ft-qat8": {
+   "xrt": 0.5111,
+   "runs": [
+    0.513,
+    0.51
+   ],
+   "sdr": 8.094,
+   "loadMs": 483,
+   "warmMs": 10053,
+   "pending": false
+  },
+  "kim-vocal-2": {
+   "xrt": 0.2211,
+   "runs": [
+    0.222,
+    0.22
+   ],
+   "sdr": 8.173,
+   "loadMs": 518,
+   "warmMs": 11778,
+   "pending": false
+  },
+  "duality-student": {
+   "xrt": 0.4382,
+   "runs": [
+    0.44,
+    0.437
+   ],
+   "sdr": 8.08,
+   "loadMs": 3536,
+   "warmMs": 22926,
+   "pending": false
+  },
+  "melband-kim": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "no browser recipe",
+   "pending": false
+  }
+ }
+}

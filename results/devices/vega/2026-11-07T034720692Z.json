@@ -1,0 +1,112 @@
+{
+ "device": "vega",
+ "backend": "webgpu",
+ "official": true,
+ "onBattery": false,
+ "date": "2026-11-07T03:47:20.692Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": true,
+  "reason": "",
+  "vendor": "amd",
+  "architecture": "gcn-5",
+  "description": "",
+  "f16": true,
+  "maxBuffer": 4294967292,
+  "maxStorageBuffers": 16,
+  "maxBinding": 4294967292
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": 1.6534,
+   "runs": [
+    1.567,
+    1.745
+   ],
+   "sdr": 7.74,
+   "loadMs": 5888,
+   "warmMs": 5921,
+   "pending": false
+  },
+  "voc-ft-p55": {
+   "xrt": 2.3354,
+   "runs": [
+    2.099,
+    2.599
+   ],
+   "sdr": 7.93,
+   "loadMs": 1702,
+   "warmMs": 5559,
+   "pending": false
+  },
+  "voc-ft-p55-mix": {
+   "xrt": 2.3226,
+   "runs": [
+    1.998,
+    2.7
+   ],
+   "sdr": 7.93,
+   "loadMs": 1801,
+   "warmMs": 6014,
+   "pending": false
+  },
+  "voc-ft-p70": {
+   "xrt": 2.1641,
+   "runs": [
+    1.903,
+    2.461
+   ],
+   "sdr": 8.085,
+   "loadMs": 1766,
+   "warmMs": 6221,
+   "pending": false
+  },
+  "voc-ft-p70-mix": {
+   "xrt": 2.1721,
+   "runs": [
+    1.951,
+    2.418
+   ],
+   "sdr": 8.085,
+   "loadMs": 1603,
+   "warmMs": 6110,
+   "pending": false
+  },
+  "voc-ft-p85": {
+   "xrt": 1.7108,
+   "runs": [
+    1.662,
+    1.761
+   ],
+   "sdr": 8.097,
+   "loadMs": 1579,
+   "warmMs": 7016,
+   "pending": false
+  },
+  "kim-vocal-2-o1": {
+   "xrt": 1.4031,
+   "runs": [
+    1.407,
+    1.399
+   ],
+   "sdr": 8.149,
+   "loadMs": 2062,
+   "warmMs": 8522,
+   "pending": false
+  },
+  "voc-ft-o1": {
+   "xrt": 1.3663,
+   "runs": [
+    1.355,
+    1.377
+   ],
+   "sdr": 8.144,
+   "loadMs": 1889,
+   "warmMs": 8181,
+   "pending": false
+  }
+ }
+}

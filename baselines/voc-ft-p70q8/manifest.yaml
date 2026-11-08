@@ -1,0 +1,13 @@
+title: Voc_FT at 70% compute, int8
+kind: ours
+author: the maintainers
+license: { weights: "from Voc_FT, MIT per UVR's README, unconfirmed", code: MIT }
+description: Voc_FT pruned to 70% of its compute, with quantization-aware int8, no overlap.
+training: { data: "teacher-labelled song excerpts", teacher: Voc_FT }
+layout: { type: mdx, n_fft: 7680, hop: 1024, dim_f: 3072, dim_t: 256, compensate: 1.021 }
+overlap: 1
+files:
+  int8: { path: vocft_p70q8/core.onnx }
+native: { file: int8, runtime: openvino, processes: 4, threads: 1 }
+browser: { file: int8, runtime: wasm@1.30.0, workers: 1, threads: 4 }
+webgpu: { file: int8, runtime: webgpu@1.23.0 }

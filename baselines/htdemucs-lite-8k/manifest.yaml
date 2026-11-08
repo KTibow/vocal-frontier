@@ -1,0 +1,15 @@
+title: HTDemucs-lite-8k
+kind: ours
+author: the maintainers
+license: { weights: MIT, code: MIT }
+description: >
+  HTDemucs with the spectral branch cut at 8.3 kHz, a half-rate transformer and spectrogram-only output, self-distilled.
+training: { data: "lyric-corpus song excerpts and MUSDB18-HQ train mixtures, teacher-labelled", teacher: HTDemucs, init: HTDemucs-lite-11k }
+layout: { type: htdemucs }
+overlap: 1
+files:
+  fp32: { path: htdemucs_sdMr8000/core.onnx }
+  fp16: { path: htdemucs_sdMr8000_f16/core.onnx }
+native: { file: fp32, runtime: openvino, processes: 4, threads: 1 }
+browser: { file: fp16, runtime: wasm@1.23.0, workers: 1, threads: 4 }
+webgpu: { file: fp16, runtime: webgpu@1.23.0 }

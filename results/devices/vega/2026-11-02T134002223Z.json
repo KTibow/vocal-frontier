@@ -1,0 +1,198 @@
+{
+ "device": "vega",
+ "backend": "webgpu",
+ "official": true,
+ "date": "2026-11-02T13:40:02.223Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": true,
+  "reason": "",
+  "vendor": "amd",
+  "architecture": "gcn-5",
+  "description": "",
+  "f16": true,
+  "maxBuffer": 4294967292,
+  "maxStorageBuffers": 16,
+  "maxBinding": 4294967292
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": 1.7704,
+   "runs": [
+    1.769,
+    1.772
+   ],
+   "sdr": 7.74,
+   "loadMs": 4130,
+   "warmMs": 5979,
+   "pending": false
+  },
+  "htdemucs-tuned": {
+   "xrt": 2.6518,
+   "runs": [
+    2.664,
+    2.639
+   ],
+   "sdr": 7.74,
+   "loadMs": 2486,
+   "warmMs": 4113,
+   "pending": false
+  },
+  "htdemucs-lite-11k": {
+   "xrt": 5.9512,
+   "runs": [
+    5.963,
+    5.939
+   ],
+   "sdr": 7.626,
+   "loadMs": 2418,
+   "warmMs": 1914,
+   "pending": false
+  },
+  "htdemucs-lite-8k": {
+   "xrt": 6.6809,
+   "runs": [
+    6.634,
+    6.728
+   ],
+   "sdr": 7.516,
+   "loadMs": 2349,
+   "warmMs": 1662,
+   "pending": false
+  },
+  "voc-ft": {
+   "xrt": 0.9476,
+   "runs": [
+    0.946,
+    0.949
+   ],
+   "sdr": 8.167,
+   "loadMs": 1741,
+   "warmMs": 3344,
+   "pending": false
+  },
+  "voc-ft-o1": {
+   "xrt": 1.8766,
+   "runs": [
+    1.855,
+    1.899
+   ],
+   "sdr": 8.139,
+   "loadMs": 1260,
+   "warmMs": 3330,
+   "pending": false
+  },
+  "voc-ft-p55": {
+   "xrt": 2.7355,
+   "runs": [
+    2.736,
+    2.735
+   ],
+   "sdr": 7.921,
+   "loadMs": 1199,
+   "warmMs": 2370,
+   "pending": false
+  },
+  "voc-ft-p55q8": {
+   "xrt": 0.6437,
+   "runs": [
+    0.639,
+    0.648
+   ],
+   "sdr": 7.887,
+   "loadMs": 1534,
+   "warmMs": 9578,
+   "pending": false
+  },
+  "voc-ft-p70": {
+   "xrt": 2.445,
+   "runs": [
+    2.427,
+    2.463
+   ],
+   "sdr": 8.053,
+   "loadMs": 1222,
+   "warmMs": 2663,
+   "pending": false
+  },
+  "voc-ft-p70q8": {
+   "xrt": 0.5375,
+   "runs": [
+    0.533,
+    0.542
+   ],
+   "sdr": 8.015,
+   "loadMs": 1517,
+   "warmMs": 11710,
+   "pending": false
+  },
+  "voc-ft-p85": {
+   "xrt": 2.1478,
+   "runs": [
+    2.133,
+    2.163
+   ],
+   "sdr": 8.073,
+   "loadMs": 1338,
+   "warmMs": 2946,
+   "pending": false
+  },
+  "voc-ft-p85q8": {
+   "xrt": 0.4854,
+   "runs": [
+    0.488,
+    0.482
+   ],
+   "sdr": 8.055,
+   "loadMs": 1560,
+   "warmMs": 13028,
+   "pending": false
+  },
+  "voc-ft-qat8": {
+   "xrt": 0.4405,
+   "runs": [
+    0.448,
+    0.433
+   ],
+   "sdr": 8.093,
+   "loadMs": 2056,
+   "warmMs": 14450,
+   "pending": false
+  },
+  "kim-vocal-2": {
+   "xrt": 0.9392,
+   "runs": [
+    0.937,
+    0.941
+   ],
+   "sdr": 8.173,
+   "loadMs": 1301,
+   "warmMs": 3317,
+   "pending": false
+  },
+  "duality-student": {
+   "xrt": 1.9445,
+   "runs": [
+    1.936,
+    1.953
+   ],
+   "sdr": 8.079,
+   "loadMs": 5733,
+   "warmMs": 6400,
+   "pending": false
+  },
+  "melband-kim": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "no webgpu recipe",
+   "pending": false
+  }
+ }
+}

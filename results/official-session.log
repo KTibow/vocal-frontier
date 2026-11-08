@@ -1,0 +1,188 @@
+build 04:20:22
+/home/kendell/Code/lyrics-frontier/vocal-frontier/dist: 89 files, 1210 MB
+1.2G	dist
+19
+deploy 04:20:37
+Deployed vocal-frontier triggers (2.00 sec)
+  vocal-frontier.kendell.dev (custom domain)
+Current Version ID: 96494f9c-e392-4974-80d0-76cefdac3950
+Done in 1m 28.2s using pnpm v12.5.1
+live has 8k: 2
+session 04:22:26
+lock held 04:22:26, load 0.85
+htdemucs: 0.852x realtime (load 1.0 s, system load 2.6)
+htdemucs-tuned: 2.155x realtime (load 4.1 s, system load 3.1)
+htdemucs-lite-11k: 5.727x realtime (load 3.1 s, system load 3.4)
+htdemucs-lite-8k: 7.145x realtime (load 3.7 s, system load 3.3)
+voc-ft: 0.382x realtime (load 0.5 s, system load 3.4)
+voc-ft-o1: 0.736x realtime (load 5.2 s, system load 4.0)
+voc-ft-p55: 1.244x realtime (load 0.4 s, system load 4.0)
+voc-ft-p55q8: 1.112x realtime (load 1.4 s, system load 3.5)
+voc-ft-p70: 1.059x realtime (load 0.3 s, system load 3.6)
+voc-ft-p70q8: 1.004x realtime (load 1.3 s, system load 3.3)
+voc-ft-p85: 0.889x realtime (load 0.4 s, system load 3.7)
+voc-ft-p85q8: 0.777x realtime (load 1.3 s, system load 3.3)
+voc-ft-qat8: 0.757x realtime (load 1.3 s, system load 3.2)
+kim-vocal-2: 0.359x realtime (load 6.4 s, system load 3.4)
+duality-student: 0.813x realtime (load 4.6 s, system load 3.7)
+melband-kim: 0.116x realtime (load 5.6 s, system load 4.0)
+melband-kim: 0.117x realtime (load 3.6 s, system load 4.2)
+duality-student: 0.784x realtime (load 4.3 s, system load 4.0)
+kim-vocal-2: 0.389x realtime (load 8.6 s, system load 4.0)
+voc-ft-qat8: 0.753x realtime (load 1.5 s, system load 3.4)
+voc-ft-p85q8: 0.742x realtime (load 1.4 s, system load 3.1)
+voc-ft-p85: 0.890x realtime (load 0.4 s, system load 3.4)
+voc-ft-p70q8: 0.918x realtime (load 1.4 s, system load 3.2)
+voc-ft-p70: 1.040x realtime (load 0.3 s, system load 3.6)
+voc-ft-p55q8: 1.006x realtime (load 1.3 s, system load 3.2)
+voc-ft-p55: 1.264x realtime (load 0.4 s, system load 3.5)
+voc-ft-o1: 0.709x realtime (load 4.8 s, system load 3.8)
+voc-ft: 0.383x realtime (load 0.4 s, system load 3.7)
+htdemucs-lite-8k: 7.221x realtime (load 3.3 s, system load 3.7)
+htdemucs-lite-11k: 5.911x realtime (load 3.3 s, system load 3.6)
+htdemucs-tuned: 2.088x realtime (load 3.9 s, system load 3.8)
+htdemucs: 0.877x realtime (load 0.8 s, system load 4.1)
+
+model                     xrt     vs htdemucs
+htdemucs                  0.8642  1.000x
+htdemucs-tuned            2.1213  2.455x
+htdemucs-lite-11k         5.8184  6.733x
+htdemucs-lite-8k          7.183   8.312x
+voc-ft                    0.3826  0.443x
+voc-ft-o1                 0.7224  0.836x
+voc-ft-p55                1.2542  1.451x
+voc-ft-p55q8              1.058   1.224x
+voc-ft-p70                1.0494  1.214x
+voc-ft-p70q8              0.9602  1.111x
+voc-ft-p85                0.8894  1.029x
+voc-ft-p85q8              0.759   0.878x
+voc-ft-qat8               0.7553  0.874x
+kim-vocal-2               0.3738  0.433x
+duality-student           0.7983  0.924x
+melband-kim               0.1167  0.135x
+native done 05:02:18
+memory watchdog: MemAvailable 977 MB, killing the browser
+[page] [0;93m2026-11-02 05:05:25.208435 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:05:25.206940 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:05:25.208350 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:05:25.212130 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+memory watchdog: MemAvailable 1192 MB, killing the browser
+[page] [0;93m2026-11-02 05:05:55.597959 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:05:55.686735 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:05:55.911969 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:05:56.027233 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+memory watchdog: MemAvailable 1140 MB, killing the browser
+memory watchdog: MemAvailable 1183 MB, killing the browser
+memory watchdog: MemAvailable 1188 MB, killing the browser
+memory watchdog: MemAvailable 1188 MB, killing the browser
+memory watchdog: MemAvailable 1091 MB, killing the browser
+memory watchdog: MemAvailable 1175 MB, killing the browser
+memory watchdog: MemAvailable 1137 MB, killing the browser
+memory watchdog: MemAvailable 1147 MB, killing the browser
+memory watchdog: MemAvailable 1133 MB, killing the browser
+memory watchdog: MemAvailable 1059 MB, killing the browser
+memory watchdog: MemAvailable 1035 MB, killing the browser
+memory watchdog: MemAvailable 1188 MB, killing the browser
+memory watchdog: MemAvailable 1064 MB, killing the browser
+memory watchdog: MemAvailable 1143 MB, killing the browser
+memory watchdog: MemAvailable 1072 MB, killing the browser
+memory watchdog: MemAvailable 1116 MB, killing the browser
+memory watchdog: MemAvailable 1154 MB, killing the browser
+memory watchdog: MemAvailable 1025 MB, killing the browser
+memory watchdog: MemAvailable 1137 MB, killing the browser
+memory watchdog: MemAvailable 1161 MB, killing the browser
+memory watchdog: MemAvailable 1192 MB, killing the browser
+memory watchdog: MemAvailable 1160 MB, killing the browser
+memory watchdog: MemAvailable 1157 MB, killing the browser
+[page] [0;93m2026-11-02 05:18:01.811113 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:18:01.838795 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:18:02.082719 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:18:02.209868 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+memory watchdog: MemAvailable 1104 MB, killing the browser
+[page] [0;93m2026-11-02 05:18:25.978064 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:18:26.028820 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:18:26.197663 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:18:26.352705 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+memory watchdog: MemAvailable 952 MB, killing the browser
+memory watchdog: MemAvailable 1196 MB, killing the browser
+results/devices/browser/2026-11-02T132109779Z.json
+htdemucs                 0.297 7.74
+htdemucs-tuned           FAILED the tab crashed or ran out of memory 
+htdemucs-lite-11k        FAILED the tab crashed or ran out of memory 
+htdemucs-lite-8k         FAILED the tab crashed or ran out of memory 
+voc-ft                   FAILED the tab crashed or ran out of memory 
+voc-ft-o1                FAILED the tab crashed or ran out of memory 
+voc-ft-p55               FAILED the tab crashed or ran out of memory 
+voc-ft-p55q8             FAILED the tab crashed or ran out of memory 
+voc-ft-p70               FAILED the tab crashed or ran out of memory 
+voc-ft-p70q8             FAILED the tab crashed or ran out of memory 
+voc-ft-p85               FAILED the tab crashed or ran out of memory 
+voc-ft-p85q8             FAILED the tab crashed or ran out of memory 
+voc-ft-qat8              FAILED the tab crashed or ran out of memory 
+kim-vocal-2              FAILED the tab crashed or ran out of memory 
+duality-student          FAILED the tab crashed or ran out of memory 
+melband-kim              FAILED no browser recipe 
+browser done 05:21:11
+[page] [0;93m2026-11-02 05:21:22.729588 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:21:49.775614 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:22:13.957593 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:22:29.593789 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:22:44.581674 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:23:22.332679 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:23:45.527584 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:24:01.892574 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:24:02.540414 [W:onnxruntime:, session_state.cc:1307 VerifyEachNodeIsAssignedToAnEp] Some nodes were not assigned to the preferred execution providers which may or may not have an 
+[page] [0;93m2026-11-02 05:24:02.541435 [W:onnxruntime:, session_state.cc:1309 VerifyEachNodeIsAssignedToAnEp] Rerunning with verbose output on a non-minimal build will show node assignments.[m
+[page] [0;93m2026-11-02 05:25:03.308060 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:25:21.332725 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:25:21.958249 [W:onnxruntime:, session_state.cc:1307 VerifyEachNodeIsAssignedToAnEp] Some nodes were not assigned to the preferred execution providers which may or may not have an 
+[page] [0;93m2026-11-02 05:25:21.959750 [W:onnxruntime:, session_state.cc:1309 VerifyEachNodeIsAssignedToAnEp] Rerunning with verbose output on a non-minimal build will show node assignments.[m
+[page] [0;93m2026-11-02 05:26:35.103744 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:26:55.614615 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:26:56.290210 [W:onnxruntime:, session_state.cc:1307 VerifyEachNodeIsAssignedToAnEp] Some nodes were not assigned to the preferred execution providers which may or may not have an 
+[page] [0;93m2026-11-02 05:26:56.291655 [W:onnxruntime:, session_state.cc:1309 VerifyEachNodeIsAssignedToAnEp] Rerunning with verbose output on a non-minimal build will show node assignments.[m
+[page] [0;93m2026-11-02 05:28:18.729664 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:28:19.410873 [W:onnxruntime:, session_state.cc:1307 VerifyEachNodeIsAssignedToAnEp] Some nodes were not assigned to the preferred execution providers which may or may not have an 
+[page] [0;93m2026-11-02 05:28:19.412583 [W:onnxruntime:, session_state.cc:1309 VerifyEachNodeIsAssignedToAnEp] Rerunning with verbose output on a non-minimal build will show node assignments.[m
+[page] [0;93m2026-11-02 05:29:46.446580 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:31:34.890579 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:32:13.093573 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:32:13.786123 [W:onnxruntime:, session_state.cc:1307 VerifyEachNodeIsAssignedToAnEp] Some nodes were not assigned to the preferred execution providers which may or may not have an 
+[page] [0;93m2026-11-02 05:32:13.787408 [W:onnxruntime:, session_state.cc:1309 VerifyEachNodeIsAssignedToAnEp] Rerunning with verbose output on a non-minimal build will show node assignments.[m
+[page] [0;93m2026-11-02 05:33:39.398759 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:33:40.036720 [W:onnxruntime:, session_state.cc:1307 VerifyEachNodeIsAssignedToAnEp] Some nodes were not assigned to the preferred execution providers which may or may not have an 
+[page] [0;93m2026-11-02 05:33:40.038249 [W:onnxruntime:, session_state.cc:1309 VerifyEachNodeIsAssignedToAnEp] Rerunning with verbose output on a non-minimal build will show node assignments.[m
+[page] [0;93m2026-11-02 05:34:58.138599 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:35:17.545629 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:35:18.181929 [W:onnxruntime:, session_state.cc:1307 VerifyEachNodeIsAssignedToAnEp] Some nodes were not assigned to the preferred execution providers which may or may not have an 
+[page] [0;93m2026-11-02 05:35:18.183458 [W:onnxruntime:, session_state.cc:1309 VerifyEachNodeIsAssignedToAnEp] Rerunning with verbose output on a non-minimal build will show node assignments.[m
+[page] [0;93m2026-11-02 05:36:27.280730 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:36:44.453205 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:36:45.055225 [W:onnxruntime:, session_state.cc:1307 VerifyEachNodeIsAssignedToAnEp] Some nodes were not assigned to the preferred execution providers which may or may not have an 
+[page] [0;93m2026-11-02 05:36:45.057130 [W:onnxruntime:, session_state.cc:1309 VerifyEachNodeIsAssignedToAnEp] Rerunning with verbose output on a non-minimal build will show node assignments.[m
+[page] [0;93m2026-11-02 05:37:43.608574 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:37:59.450113 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:38:20.885674 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:38:58.525200 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:39:08.695600 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:39:19.534805 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+[page] [0;93m2026-11-02 05:39:39.075134 [W:onnxruntime:Default, cpuid_info.cc:91 LogEarlyWarning] Unknown CPU vendor. cpuinfo_vendor value: 0[m
+results/devices/vega/2026-11-02T134002223Z.json
+htdemucs                 1.7704 7.74
+htdemucs-tuned           2.6518 7.74
+htdemucs-lite-11k        5.9512 7.626
+htdemucs-lite-8k         6.6809 7.516
+voc-ft                   0.9476 8.167
+voc-ft-o1                1.8766 8.139
+voc-ft-p55               2.7355 7.921
+voc-ft-p55q8             0.6437 7.887
+voc-ft-p70               2.445 8.053
+voc-ft-p70q8             0.5375 8.015
+voc-ft-p85               2.1478 8.073
+voc-ft-p85q8             0.4854 8.055
+voc-ft-qat8              0.4405 8.093
+kim-vocal-2              0.9392 8.173
+duality-student          1.9445 8.079
+melband-kim              FAILED no webgpu recipe 
+vega done 05:40:04, load 1.65
+== ALL DONE 05:40:04

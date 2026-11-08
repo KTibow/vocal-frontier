@@ -1,0 +1,277 @@
+{
+ "device": "gen12lp",
+ "backend": "webgpu",
+ "official": true,
+ "onBattery": false,
+ "date": "2026-11-08T01:31:06.220Z",
+ "ua": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": true,
+  "reason": "",
+  "vendor": "intel",
+  "architecture": "gen-12lp",
+  "description": "",
+  "f16": true,
+  "maxBuffer": 4294967292,
+  "maxStorageBuffers": 16,
+  "maxBinding": 2147483644
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": 0.941,
+   "runs": [
+    0.94,
+    0.942
+   ],
+   "sdr": 7.739,
+   "loadMs": 2181,
+   "warmMs": 6515,
+   "pending": false
+  },
+  "duality-student": {
+   "xrt": 0.8441,
+   "runs": [
+    0.843,
+    0.845
+   ],
+   "sdr": 8.079,
+   "loadMs": 2956,
+   "warmMs": 12406,
+   "pending": false
+  },
+  "htdemucs-lite-11k": {
+   "xrt": 3.4197,
+   "runs": [
+    3.457,
+    3.383
+   ],
+   "sdr": 7.627,
+   "loadMs": 2027,
+   "warmMs": 3115,
+   "pending": false
+  },
+  "htdemucs-lite-8k": {
+   "xrt": 3.9626,
+   "runs": [
+    3.907,
+    4.019
+   ],
+   "sdr": 7.516,
+   "loadMs": 1927,
+   "warmMs": 2619,
+   "pending": false
+  },
+  "htdemucs-tuned": {
+   "xrt": 1.4092,
+   "runs": [
+    1.409,
+    1.41
+   ],
+   "sdr": 7.74,
+   "loadMs": 2340,
+   "warmMs": 6355,
+   "pending": false
+  },
+  "kim-vocal-2": {
+   "xrt": 0.3072,
+   "runs": [
+    0.307,
+    0.307
+   ],
+   "sdr": 8.172,
+   "loadMs": 903,
+   "warmMs": 8929,
+   "pending": false
+  },
+  "kim-vocal-2-o1": {
+   "xrt": 0.6129,
+   "runs": [
+    0.613,
+    0.613
+   ],
+   "sdr": 8.149,
+   "loadMs": 951,
+   "warmMs": 16879,
+   "pending": false
+  },
+  "melband-kim": {
+   "xrt": 0.1061,
+   "runs": [
+    0.106,
+    0.106
+   ],
+   "sdr": 8.28,
+   "loadMs": 2712,
+   "warmMs": 32752,
+   "pending": false
+  },
+  "melband-kim-o1": {
+   "xrt": 0.2394,
+   "runs": [
+    0.239,
+    0.24
+   ],
+   "sdr": 8.278,
+   "loadMs": 3020,
+   "warmMs": 32523,
+   "pending": false
+  },
+  "melband-kim-wasm": {
+   "xrt": 0.2392,
+   "runs": [
+    0.239,
+    0.239
+   ],
+   "sdr": 8.27,
+   "loadMs": 2755,
+   "warmMs": 32362,
+   "pending": false
+  },
+  "voc-ft": {
+   "xrt": 0.3061,
+   "runs": [
+    0.304,
+    0.308
+   ],
+   "sdr": 8.167,
+   "loadMs": 912,
+   "warmMs": 9265,
+   "pending": false
+  },
+  "voc-ft-o1": {
+   "xrt": 0.6123,
+   "runs": [
+    0.611,
+    0.614
+   ],
+   "sdr": 8.144,
+   "loadMs": 875,
+   "warmMs": 16885,
+   "pending": false
+  },
+  "voc-ft-o15": {
+   "xrt": 0.3689,
+   "runs": [
+    0.369,
+    0.369
+   ],
+   "sdr": 8.158,
+   "loadMs": 898,
+   "warmMs": 16868,
+   "pending": false
+  },
+  "voc-ft-o175": {
+   "xrt": 0.3673,
+   "runs": [
+    0.369,
+    0.366
+   ],
+   "sdr": 8.155,
+   "loadMs": 926,
+   "warmMs": 8780,
+   "pending": false
+  },
+  "voc-ft-p55": {
+   "xrt": 0.9879,
+   "runs": [
+    0.989,
+    0.987
+   ],
+   "sdr": 7.93,
+   "loadMs": 856,
+   "warmMs": 10807,
+   "pending": false
+  },
+  "voc-ft-p55-mix": {
+   "xrt": 0.9895,
+   "runs": [
+    0.99,
+    0.989
+   ],
+   "sdr": 7.93,
+   "loadMs": 965,
+   "warmMs": 10699,
+   "pending": false
+  },
+  "voc-ft-p55q8": {
+   "xrt": 0.5077,
+   "runs": [
+    0.508,
+    0.507
+   ],
+   "sdr": 7.887,
+   "loadMs": 1144,
+   "warmMs": 11548,
+   "pending": false
+  },
+  "voc-ft-p70": {
+   "xrt": 0.858,
+   "runs": [
+    0.859,
+    0.857
+   ],
+   "sdr": 8.085,
+   "loadMs": 864,
+   "warmMs": 12221,
+   "pending": false
+  },
+  "voc-ft-p70-mix": {
+   "xrt": 0.8613,
+   "runs": [
+    0.862,
+    0.861
+   ],
+   "sdr": 8.085,
+   "loadMs": 845,
+   "warmMs": 12287,
+   "pending": false
+  },
+  "voc-ft-p70q8": {
+   "xrt": 0.4357,
+   "runs": [
+    0.435,
+    0.436
+   ],
+   "sdr": 8.02,
+   "loadMs": 1141,
+   "warmMs": 13090,
+   "pending": false
+  },
+  "voc-ft-p85": {
+   "xrt": 0.7196,
+   "runs": [
+    0.72,
+    0.719
+   ],
+   "sdr": 8.097,
+   "loadMs": 898,
+   "warmMs": 14519,
+   "pending": false
+  },
+  "voc-ft-p85q8": {
+   "xrt": 0.3702,
+   "runs": [
+    0.37,
+    0.37
+   ],
+   "sdr": 8.054,
+   "loadMs": 1194,
+   "warmMs": 15101,
+   "pending": false
+  },
+  "voc-ft-qat8": {
+   "xrt": 0.3229,
+   "runs": [
+    0.323,
+    0.323
+   ],
+   "sdr": 8.093,
+   "loadMs": 1232,
+   "warmMs": 17012,
+   "pending": false
+  }
+ }
+}

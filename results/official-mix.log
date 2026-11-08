@@ -1,0 +1,28 @@
+/home/kendell/Code/lyrics-frontier/vocal-frontier/dist: 89 files, 1210 MB
+Current Version ID: d4034e12-9a06-4965-9880-5dedf8afc8fb
+Done in 19.6s using pnpm v12.5.1
+lock held 07:16:19, load 3.11
+htdemucs: 0.743x realtime (load 1.4 s, system load 4.2)
+voc-ft-p70-mix: 1.039x realtime (load 0.4 s, system load 3.9)
+voc-ft-p55-mix: 1.235x realtime (load 0.3 s, system load 3.7)
+voc-ft-p55-mix: 1.242x realtime (load 0.3 s, system load 3.6)
+voc-ft-p70-mix: 1.027x realtime (load 0.3 s, system load 3.7)
+htdemucs: 0.862x realtime (load 1.1 s, system load 3.8)
+
+model                     xrt     vs htdemucs
+htdemucs                  0.8002  1.000x
+voc-ft-p70-mix            1.033   1.291x
+voc-ft-p55-mix            1.2384  1.548x
+native done 07:20:43
+memory watchdog: MemAvailable 1188 MB, killing the browser
+results/devices/browser/2026-11-02T152838514Z.json
+htdemucs                 FAILED the tab crashed or ran out of memory 7.74
+voc-ft-p70-mix           0.722 8.011
+voc-ft-p55-mix           0.8366 7.891
+browser done 07:28:41
+results/devices/vega/2026-11-02T153050691Z.json
+htdemucs                 1.7696 7.74
+voc-ft-p70-mix           2.4465 8.053
+voc-ft-p55-mix           2.6841 7.921
+vega done 07:30:52, load 1.61
+== ALL DONE 07:30:52

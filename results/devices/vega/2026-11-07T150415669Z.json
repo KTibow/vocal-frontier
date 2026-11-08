@@ -1,0 +1,46 @@
+{
+ "device": "vega",
+ "backend": "webgpu",
+ "official": true,
+ "onBattery": false,
+ "date": "2026-11-07T15:04:15.669Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": true,
+  "reason": "",
+  "vendor": "amd",
+  "architecture": "gcn-5",
+  "description": "",
+  "f16": true,
+  "maxBuffer": 4294967292,
+  "maxStorageBuffers": 16,
+  "maxBinding": 4294967292
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": 1.7782,
+   "runs": [
+    1.781,
+    1.776
+   ],
+   "sdr": 7.74,
+   "loadMs": 9637,
+   "warmMs": 4053,
+   "pending": false
+  },
+  "voc-ft-o15": {
+   "xrt": 1.1502,
+   "runs": [
+    1.148,
+    1.152
+   ],
+   "sdr": 8.158,
+   "loadMs": 1283,
+   "warmMs": 5936,
+   "pending": false
+  }
+ }
+}

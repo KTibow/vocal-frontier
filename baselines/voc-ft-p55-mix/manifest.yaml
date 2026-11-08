@@ -1,0 +1,16 @@
+title: Voc_FT at 55% compute, mixed
+kind: ours
+author: the maintainers
+license: { weights: "from Voc_FT, MIT per UVR's README, unconfirmed", code: MIT }
+description: Pruned Voc_FT that uses the fastest file per backend, int8 in the browser, fp32 natively and fp16 on WebGPU. Chunks are twice as long as usual (dim_t 512). Scored at its int8 file, the lowest of the three.
+training: { data: "teacher-labelled song excerpts", teacher: Voc_FT }
+layout: { type: mdx, n_fft: 7680, hop: 1024, dim_f: 3072, dim_t: 512, compensate: 1.021 }
+overlap: 1
+files:
+  fp32: { path: vocft_p55_t512/core.onnx }
+  fp16: { path: vocft_p55_f16_t512/core.onnx }
+  int8: { path: vocft_p55rq8_t512/core.onnx }
+native: { file: fp32, runtime: onnxruntime, processes: 1, threads: 4 }
+browser: { file: int8, runtime: wasm@1.30.0, workers: 1, threads: 4 }
+webgpu: { file: fp16, runtime: webgpu@1.23.0 }
+scored_at: int8

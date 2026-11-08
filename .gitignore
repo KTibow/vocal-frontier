@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+node_modules/
+dist/
+.preview/
+.preview-native.json
+results/quality/*.quick.json
+data/
+models/*
+!models/.gitkeep
+*.onnx
+.wrangler/
+.sha256-cache.json
+.pytest_cache/

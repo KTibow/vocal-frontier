@@ -1,0 +1,21 @@
+{
+ "sr": 44100,
+ "channels": 2,
+ "samples": 1323000,
+ "vocal_start_s": 75.06,
+ "credits": [
+  {
+   "role": "vocals",
+   "title": "\"Reasons Vocals\" by spinningmerkaba",
+   "url": "https://ccmixter.org/files/jlbrock44/68790",
+   "license": "CC BY 4.0"
+  },
+  {
+   "role": "instrumental",
+   "title": "\"Drive\" by Alex Beroza",
+   "url": "https://ccmixter.org/files/AlexBeroza/43098",
+   "license": "CC BY 3.0"
+  }
+ ],
+ "note": "Mixed and level-matched for this benchmark."
+}

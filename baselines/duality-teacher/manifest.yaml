@@ -1,0 +1,10 @@
+title: Musetric duality teacher
+kind: baseline
+author: Aname-Tommy; ONNX export by musetric
+license: { weights: Apache-2.0, code: Apache-2.0 }
+description: A 464 MB MelBand RoFormer. Native only here. In the browser it ran once at 0.2x HTDemucs, then ran out of memory, and it crashed on Vega.
+layout: { type: mask, n_fft: 2048, hop: 441, frames: 1100 }
+overlap: 2
+files:
+  fp16: { path: duality_merged/core.onnx }
+native: { file: fp16, runtime: openvino, processes: 1, threads: 4 }

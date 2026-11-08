@@ -1,0 +1,42 @@
+{
+ "variant": "melband-kim",
+ "backend": "webgpu",
+ "parent": "melband-kim",
+ "parent_runtime": "openvino",
+ "overlap": 2,
+ "verdict": "fail",
+ "max_abs_delta": 0.0765,
+ "mean_delta": 0.0112,
+ "date": "2026-11-03",
+ "files": {
+  "file": "e3a6501482749a311423043124038f4c1169201e06b02824eeff71ac4e8001e5",
+  "engine": "a5ac7bd59a1e3463ba46d4191399341ccafee2617377269b530a5e3c13ba6d72",
+  "against": "d8d0a8708a0e34a4ef5c7a3d5465d2b7de1479f0213045dad3c8ec6a45c5ab29"
+ },
+ "clips": {
+  "musdb30/PR_-_Happy_Daze": {
+   "parent": 3.8279,
+   "variant": 3.9044,
+   "delta": 0.0765
+  },
+  "musdb30/Motor_Tapes_-_Shore": {
+   "parent": -0.2667,
+   "variant": -0.2935,
+   "delta": -0.0268
+  },
+  "cc30/c40": {
+   "parent": 9.144,
+   "variant": 9.1406,
+   "delta": -0.0034
+  },
+  "cc30/c17": {
+   "parent": 11.0768,
+   "variant": 11.08,
+   "delta": 0.0032
+  }
+ },
+ "private30_clips": {
+  "count": 4,
+  "max_abs_delta": 0.0369
+ }
+}

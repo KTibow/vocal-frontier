@@ -1,0 +1,17 @@
+{
+ "sets": {
+  "musdb30": {
+   "mean": 12.61,
+   "clips": 50
+  },
+  "cc30": {
+   "mean": 17.23,
+   "clips": 50
+  },
+  "private30": {
+   "mean": 12.91,
+   "clips": 50
+  }
+ },
+ "source": "imported from the maintainers' bench"
+}

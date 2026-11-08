@@ -1,0 +1,88 @@
+{
+ "device": "native",
+ "date": "2026-11-02T08:54:22Z",
+ "cpu": "AMD Ryzen 5 3501U with Radeon Vega Mobile Gfx",
+ "cpus": "0,2,4,6",
+ "models": {
+  "htdemucs": {
+   "xrt": 0.8113,
+   "runs": [
+    39.84,
+    34.32
+   ],
+   "sdr": 7.74
+  },
+  "htdemucs-tuned": {
+   "xrt": 2.0822,
+   "runs": [
+    15.16,
+    13.69
+   ],
+   "sdr": 7.74
+  },
+  "htdemucs-lite-11k": {
+   "xrt": 5.4511,
+   "runs": [
+    5.45,
+    5.56
+   ],
+   "sdr": 7.626
+  },
+  "voc-ft": {
+   "xrt": 0.3537,
+   "runs": [
+    89.38,
+    80.5
+   ],
+   "sdr": 8.168
+  },
+  "voc-ft-o1": {
+   "xrt": 0.1397,
+   "runs": [
+    387.3,
+    119.05
+   ],
+   "sdr": 8.14
+  },
+  "voc-ft-p55": {
+   "xrt": 1.2426,
+   "runs": [
+    24.04,
+    24.24
+   ],
+   "sdr": 7.921
+  },
+  "voc-ft-qat8": {
+   "xrt": 0.6691,
+   "runs": [
+    44.53,
+    45.15
+   ],
+   "sdr": 8.092
+  },
+  "kim-vocal-2": {
+   "xrt": 0.3845,
+   "runs": [
+    78.56,
+    77.48
+   ],
+   "sdr": 8.173
+  },
+  "duality-student": {
+   "xrt": 0.8061,
+   "runs": [
+    37.27,
+    37.16
+   ],
+   "sdr": 8.08
+  },
+  "melband-kim": {
+   "xrt": 0.1158,
+   "runs": [
+    259.3,
+    259.01
+   ],
+   "sdr": 8.28
+  }
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "variant": "htdemucs",
+ "backend": "webgpu",
+ "parent": "htdemucs",
+ "parent_runtime": "onnxruntime",
+ "overlap": 1.3333,
+ "verdict": "pass",
+ "max_abs_delta": 0.0456,
+ "mean_delta": 0.0038,
+ "date": "2026-11-04",
+ "files": {
+  "file": "59ed6f01657506bc7919fb8cf92068251c727e0ce8c7ebd9078f13b84c4abb68",
+  "engine": null,
+  "against": "1a2b68854d0feee91af1650c658af3c064a4404dd42f5148706080b8991221de"
+ },
+ "clips": {
+  "musdb30/PR_-_Happy_Daze": {
+   "parent": 1.8597,
+   "variant": 1.9052579323010612,
+   "delta": 0.0456
+  },
+  "musdb30/Motor_Tapes_-_Shore": {
+   "parent": 2.2191,
+   "variant": 2.2185087053937833,
+   "delta": -0.0006
+  },
+  "cc30/c40": {
+   "parent": 5.1858,
+   "variant": 5.192346398082557,
+   "delta": 0.0065
+  },
+  "cc30/c17": {
+   "parent": 8.5219,
+   "variant": 8.52032379247821,
+   "delta": -0.0016
+  }
+ },
+ "private30_clips": {
+  "count": 4,
+  "max_abs_delta": 0.0245
+ }
+}

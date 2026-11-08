@@ -1,0 +1,265 @@
+{
+ "device": "adreno",
+ "backend": "webgpu",
+ "official": true,
+ "onBattery": false,
+ "date": "2026-11-08T02:30:43.739Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": true,
+  "reason": "",
+  "vendor": "qualcomm",
+  "architecture": "adreno-7xx",
+  "description": "",
+  "f16": true,
+  "maxBuffer": 4294967292,
+  "maxStorageBuffers": 16,
+  "maxBinding": 134217728
+ },
+ "cores": 12,
+ "memoryGB": 16,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": 3.6257,
+   "runs": [
+    3.64,
+    3.611
+   ],
+   "sdr": 7.74,
+   "loadMs": 1699,
+   "warmMs": 1647,
+   "pending": false
+  },
+  "duality-student": {
+   "xrt": 3.7646,
+   "runs": [
+    3.78,
+    3.749
+   ],
+   "sdr": 8.08,
+   "loadMs": 6771,
+   "warmMs": 3115,
+   "pending": false
+  },
+  "htdemucs-lite-11k": {
+   "xrt": 11.4826,
+   "runs": [
+    11.559,
+    11.406
+   ],
+   "sdr": 7.626,
+   "loadMs": 1370,
+   "warmMs": 879,
+   "pending": false
+  },
+  "htdemucs-lite-8k": {
+   "xrt": 12.8579,
+   "runs": [
+    12.736,
+    12.981
+   ],
+   "sdr": 7.516,
+   "loadMs": 1339,
+   "warmMs": 786,
+   "pending": false
+  },
+  "htdemucs-tuned": {
+   "xrt": 5.3601,
+   "runs": [
+    5.37,
+    5.35
+   ],
+   "sdr": 7.739,
+   "loadMs": 1383,
+   "warmMs": 1616,
+   "pending": false
+  },
+  "kim-vocal-2": {
+   "xrt": 1.5589,
+   "runs": [
+    1.55,
+    1.568
+   ],
+   "sdr": 8.172,
+   "loadMs": 871,
+   "warmMs": 2020,
+   "pending": false
+  },
+  "kim-vocal-2-o1": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  },
+  "melband-kim": {
+   "xrt": 0.4089,
+   "runs": [
+    0.409,
+    0.409
+   ],
+   "sdr": 8.287,
+   "loadMs": 1566,
+   "warmMs": 8795,
+   "pending": false
+  },
+  "melband-kim-o1": {
+   "xrt": 0.9142,
+   "runs": [
+    0.911,
+    0.917
+   ],
+   "sdr": 8.276,
+   "loadMs": 1552,
+   "warmMs": 8835,
+   "pending": false
+  },
+  "melband-kim-wasm": {
+   "xrt": 0.9196,
+   "runs": [
+    0.919,
+    0.92
+   ],
+   "sdr": 8.271,
+   "loadMs": 833,
+   "warmMs": 8678,
+   "pending": false
+  },
+  "voc-ft": {
+   "xrt": 1.5563,
+   "runs": [
+    1.573,
+    1.54
+   ],
+   "sdr": 8.167,
+   "loadMs": 883,
+   "warmMs": 1876,
+   "pending": false
+  },
+  "voc-ft-o1": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  },
+  "voc-ft-o15": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  },
+  "voc-ft-o175": {
+   "xrt": 1.8864,
+   "runs": [
+    1.888,
+    1.884
+   ],
+   "sdr": 8.155,
+   "loadMs": 887,
+   "warmMs": 1876,
+   "pending": false
+  },
+  "voc-ft-p55": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  },
+  "voc-ft-p55-mix": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  },
+  "voc-ft-p55q8": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  },
+  "voc-ft-p70": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  },
+  "voc-ft-p70-mix": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  },
+  "voc-ft-p70q8": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  },
+  "voc-ft-p85": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  },
+  "voc-ft-p85q8": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  },
+  "voc-ft-qat8": {
+   "xrt": null,
+   "runs": [
+    null,
+    null
+   ],
+   "sdr": null,
+   "error": "failed to call OrtRun(). ERROR_CODE: 1, ERROR_MESSAGE: WebGPU validation failed. Binding size (167772160) of [Buffer (unlabeled)] is larger than the maximum storage buffer binding size (134217728).\n - While validating entries[3] against { b",
+   "pending": false
+  }
+ }
+}

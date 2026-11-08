@@ -1,0 +1,13 @@
+title: Kim Vocal 2, no overlap
+kind: tuned
+author: Kimberley Jensen
+license: { weights: unstated, code: MIT }
+description: Kim Vocal 2 without overlap, in chunks twice as long as usual (dim_t 512), which scores about 0.1 dB higher.
+layout: { type: mdx, n_fft: 7680, hop: 1024, dim_f: 3072, dim_t: 512, compensate: 1.009 }
+overlap: 1
+files:
+  fp32: { path: kimv2_t512/core.onnx }
+  fp16: { path: kimv2_f16_t512/core.onnx }
+native: { file: fp32, runtime: onnxruntime, processes: 1, threads: 4 }
+browser: { file: fp32, runtime: wasm@1.30.0, workers: 1, threads: 4 }
+webgpu: { file: fp16, runtime: webgpu@1.23.0 }

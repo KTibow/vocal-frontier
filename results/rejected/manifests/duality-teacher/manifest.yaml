@@ -1,0 +1,12 @@
+title: Musetric duality teacher
+kind: baseline
+author: musetric
+license: { weights: Apache-2.0, code: Apache-2.0 }
+description: A MelBand RoFormer in fp16, half the size of MelBand Kim.
+layout: { type: mask, n_fft: 2048, hop: 441, frames: 1100 }
+overlap: 2
+files:
+  fp16: { path: duality_merged/core.onnx }
+native: { file: fp16, runtime: openvino, processes: 1, threads: 4 }
+browser: { file: fp16, runtime: wasm@1.30.0, workers: 1, threads: 4 }
+webgpu: { file: fp16, runtime: webgpu@1.30.0 }

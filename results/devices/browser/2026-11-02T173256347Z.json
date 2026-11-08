@@ -1,0 +1,38 @@
+{
+ "device": "browser",
+ "backend": "browser",
+ "official": true,
+ "date": "2026-11-02T17:32:56.347Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": false,
+  "reason": "no WebGPU adapter"
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": 0.2951,
+   "runs": [
+    0.294,
+    0.296
+   ],
+   "sdr": 7.74,
+   "loadMs": 2189,
+   "warmMs": 17838,
+   "pending": false
+  },
+  "kim-vocal-2-o1": {
+   "xrt": 0.4599,
+   "runs": [
+    0.471,
+    0.449
+   ],
+   "sdr": 8.146,
+   "loadMs": 623,
+   "warmMs": 11452,
+   "pending": false
+  }
+ }
+}

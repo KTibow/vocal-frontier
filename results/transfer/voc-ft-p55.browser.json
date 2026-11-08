@@ -1,0 +1,42 @@
+{
+ "variant": "voc-ft-p55",
+ "backend": "browser",
+ "parent": "voc-ft-p55",
+ "parent_runtime": "onnxruntime",
+ "overlap": 1,
+ "verdict": "pass",
+ "max_abs_delta": 0.0,
+ "mean_delta": -0.0,
+ "date": "2026-11-06",
+ "files": {
+  "file": "d157bd21f4795444d80ac5ce3765821abee028c0b883652da6e343e12e005cae",
+  "engine": null,
+  "against": "d157bd21f4795444d80ac5ce3765821abee028c0b883652da6e343e12e005cae"
+ },
+ "clips": {
+  "musdb30/PR_-_Happy_Daze": {
+   "parent": 2.7614,
+   "variant": 2.7613698142180647,
+   "delta": -0.0
+  },
+  "musdb30/Motor_Tapes_-_Shore": {
+   "parent": 0.5048,
+   "variant": 0.5048069903499881,
+   "delta": 0.0
+  },
+  "cc30/c40": {
+   "parent": 2.2127,
+   "variant": 2.212742405291008,
+   "delta": 0.0
+  },
+  "cc30/c17": {
+   "parent": 9.5964,
+   "variant": 9.596385658419997,
+   "delta": -0.0
+  }
+ },
+ "private30_clips": {
+  "count": 4,
+  "max_abs_delta": 0.0
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "variant": "duality-student",
+ "backend": "webgpu",
+ "parent": "duality-student",
+ "parent_runtime": "openvino",
+ "overlap": 1,
+ "verdict": "pass",
+ "max_abs_delta": 0.0038,
+ "mean_delta": -0.0004,
+ "date": "2026-11-04",
+ "files": {
+  "file": "661a0efbc427a80c8a81134658cb42200cd1f69d61f2aa90a39a3adcc1d13f17",
+  "engine": null,
+  "against": "0bc9d9f25e8bc0f4734add9595e2199e457af9638785e408c6ce1951dc801ac5"
+ },
+ "clips": {
+  "musdb30/PR_-_Happy_Daze": {
+   "parent": 0.0,
+   "variant": 5.946035187627806e-06,
+   "delta": 0.0
+  },
+  "musdb30/Motor_Tapes_-_Shore": {
+   "parent": 0.0001,
+   "variant": 5.039040656048016e-05,
+   "delta": -0.0
+  },
+  "cc30/c40": {
+   "parent": 8.8131,
+   "variant": 8.809316168734796,
+   "delta": -0.0038
+  },
+  "cc30/c17": {
+   "parent": 10.2069,
+   "variant": 10.205629548012299,
+   "delta": -0.0013
+  }
+ },
+ "private30_clips": {
+  "count": 4,
+  "max_abs_delta": 0.0018
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "device": "gen12lp",
+ "date": "2026-11-02T05:52:37Z",
+ "models": {
+  "htdemucs": {
+   "xrt": 0.9425,
+   "sdr": 7.739
+  },
+  "duality-student": {
+   "xrt": 0.8461,
+   "sdr": 8.079
+  },
+  "htdemucs-lite-11k": {
+   "xrt": 3.4562,
+   "sdr": 7.627
+  },
+  "htdemucs-tuned": {
+   "xrt": 1.407,
+   "sdr": 7.74
+  },
+  "kim-vocal-2": {
+   "xrt": 0.3076,
+   "sdr": 8.172
+  },
+  "voc-ft": {
+   "xrt": 0.3071,
+   "sdr": 8.167
+  },
+  "voc-ft-o1": {
+   "xrt": 0.6148,
+   "sdr": 8.139
+  },
+  "voc-ft-p55": {
+   "xrt": 0.9952,
+   "sdr": 7.921
+  },
+  "voc-ft-qat8": {
+   "xrt": 0.3264,
+   "sdr": 8.093
+  }
+ }
+}

@@ -1,0 +1,24 @@
+/home/kendell/Code/lyrics-frontier/vocal-frontier/dist: 89 files, 1210 MB
+  vocal-frontier.kendell.dev (custom domain)
+Current Version ID: f552bcc2-8efe-48dd-a403-29ccf6683238
+Done in 16.3s using pnpm v12.5.1
+live workers: 1
+browser start 06:14:02, avail 5141
+results/devices/browser/2026-11-02T145236014Z.json
+htdemucs                 0.294 7.74
+htdemucs-tuned           0.8877 7.74
+htdemucs-lite-11k        2.3716 7.626
+htdemucs-lite-8k         2.8925 7.516
+voc-ft                   0.1953 8.168
+voc-ft-o1                0.4471 8.14
+voc-ft-p55               0.7467 7.921
+voc-ft-p55q8             0.8259 7.891
+voc-ft-p70               0.6125 8.053
+voc-ft-p70q8             0.7037 8.011
+voc-ft-p85               0.5179 8.073
+voc-ft-p85q8             0.5971 8.054
+voc-ft-qat8              0.5111 8.094
+kim-vocal-2              0.2211 8.173
+duality-student          0.4382 8.08
+melband-kim              FAILED no browser recipe 
+== ALL DONE 06:52:37

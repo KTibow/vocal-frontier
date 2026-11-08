@@ -1,0 +1,14 @@
+title: MelBand Kim, no overlap, stages in WASM
+kind: ours
+author: Kimberley Jensen (weights); the maintainers (browser engine)
+license: { weights: MIT, code: MIT }
+description: "MelBand Kim's own weights, without overlap, in a custom browser engine that runs each transformer layer as its own ONNX Runtime session, a few bands or frames at a time, so it fits the 4 GB WASM heap. Native is the same as MelBand Kim, no overlap. On WebGPU it runs as Composer's chain of graphs does, also without overlap."
+layout: { type: mask, n_fft: 2048, hop: 441, frames: 801 }
+overlap: 1
+files:
+  fp32: { path: melkim/core.onnx }
+  stages_gpu: { path: melkim_stages_gpu/stages.bin }
+  stages: { path: melkim_stages/stages.bin }
+native: { file: fp32, runtime: openvino, processes: 1, threads: 4 }
+browser: { engine: engine/worker.js, file: stages, runtime: wasm@1.30.0, workers: 1, threads: 4 }
+webgpu: { engine: engine/gpu.js, file: stages_gpu, runtime: webgpu@1.30.0 }

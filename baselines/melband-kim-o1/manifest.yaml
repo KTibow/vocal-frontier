@@ -1,0 +1,12 @@
+title: MelBand Kim, tuned
+kind: tuned
+author: Kimberley Jensen
+license: { weights: MIT, code: MIT }
+description: "The same weights on the fastest stock runtimes we found, without overlap: OpenVINO natively. No overlap costs about 0.06 dB. Stock runtimes don't fit WASM, so there's no browser recipe. On WebGPU it runs as Composer's chain of graphs does, also without overlap. One fp16 session ran faster, at 0.58× realtime on Vega, but came out up to 0.8 dB off the native file on 8 test clips, even with its norms in fp32."
+layout: { type: mask, n_fft: 2048, hop: 441, frames: 801 }
+overlap: 1
+files:
+  fp32: { path: melkim/core.onnx }
+  stages_gpu: { path: melkim_stages_gpu/stages.bin }
+native: { file: fp32, runtime: openvino, processes: 1, threads: 4 }
+webgpu: { engine: engine/gpu.js, file: stages_gpu, runtime: webgpu@1.30.0 }

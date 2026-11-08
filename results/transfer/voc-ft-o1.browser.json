@@ -1,0 +1,42 @@
+{
+ "variant": "voc-ft-o1",
+ "backend": "browser",
+ "parent": "voc-ft-o1",
+ "parent_runtime": "openvino",
+ "overlap": 1,
+ "verdict": "pass",
+ "max_abs_delta": 0.0,
+ "mean_delta": 0.0,
+ "date": "2026-11-06",
+ "files": {
+  "file": "e4a0c6a6dc84bda5bd2cbffce96d4f491c60696a47838626a54df8c094e73a8d",
+  "engine": null,
+  "against": "e4a0c6a6dc84bda5bd2cbffce96d4f491c60696a47838626a54df8c094e73a8d"
+ },
+ "clips": {
+  "musdb30/PR_-_Happy_Daze": {
+   "parent": -8.8597,
+   "variant": -8.859684276651294,
+   "delta": 0.0
+  },
+  "musdb30/Motor_Tapes_-_Shore": {
+   "parent": 3.3895,
+   "variant": 3.3895418882896116,
+   "delta": 0.0
+  },
+  "cc30/c40": {
+   "parent": 9.0858,
+   "variant": 9.085804679254469,
+   "delta": 0.0
+  },
+  "cc30/c17": {
+   "parent": 10.4662,
+   "variant": 10.466220050921855,
+   "delta": 0.0
+  }
+ },
+ "private30_clips": {
+  "count": 4,
+  "max_abs_delta": 0.0
+ }
+}

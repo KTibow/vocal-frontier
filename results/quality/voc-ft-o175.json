@@ -1,0 +1,17 @@
+{
+ "sets": {
+  "musdb30": {
+   "mean": 11.26,
+   "clips": 50
+  },
+  "cc30": {
+   "mean": 15.872,
+   "clips": 50
+  },
+  "private30": {
+   "mean": 12.762,
+   "clips": 50
+  }
+ },
+ "source": "scored here on WebGPU, fp16 file"
+}

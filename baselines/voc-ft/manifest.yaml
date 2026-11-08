@@ -1,0 +1,13 @@
+title: UVR Voc_FT
+kind: baseline
+author: UVR community
+license: { weights: "MIT per UVR's README, unconfirmed", code: MIT }
+description: UVR's vocal MDX-Net at overlap 2, as its own tool runs it. fp16 on WebGPU.
+layout: { type: mdx, n_fft: 7680, hop: 1024, dim_f: 3072, dim_t: 256, compensate: 1.021 }
+overlap: 2
+files:
+  fp32: { path: vocft/UVR-MDX-NET-Voc_FT.onnx }
+  fp16: { path: vocft_f16/core.onnx }
+native: { file: fp32, runtime: openvino, processes: 2, threads: 2 }
+browser: { file: fp32, runtime: wasm@1.30.0, workers: 1, threads: 4 }
+webgpu: { file: fp16, runtime: webgpu@1.23.0 }

@@ -1,0 +1,90 @@
+{
+ "device": "vega",
+ "backend": "webgpu",
+ "official": true,
+ "onBattery": false,
+ "date": "2026-11-03T21:30:15.241Z",
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+ "adapter": {
+  "ok": true,
+  "reason": "",
+  "vendor": "amd",
+  "architecture": "gcn-5",
+  "description": "",
+  "f16": true,
+  "maxBuffer": 4294967292,
+  "maxStorageBuffers": 16,
+  "maxBinding": 4294967292
+ },
+ "cores": 4,
+ "memoryGB": 8,
+ "coi": true,
+ "models": {
+  "htdemucs": {
+   "xrt": 1.7026,
+   "runs": [
+    1.652,
+    1.754
+   ],
+   "sdr": 7.74,
+   "loadMs": 5164,
+   "warmMs": 8486,
+   "pending": false
+  },
+  "melband-kim": {
+   "xrt": 0.1993,
+   "runs": [
+    0.2,
+    0.198
+   ],
+   "sdr": 8.272,
+   "loadMs": 6169,
+   "warmMs": 18979,
+   "pending": false
+  },
+  "melband-kim-o1": {
+   "xrt": 0.6431,
+   "runs": [
+    0.642,
+    0.645
+   ],
+   "sdr": 8.276,
+   "loadMs": 4983,
+   "warmMs": 13893,
+   "pending": false
+  },
+  "melband-kim-wasm": {
+   "xrt": 0.5945,
+   "runs": [
+    0.645,
+    0.548
+   ],
+   "sdr": 8.276,
+   "loadMs": 3143,
+   "warmMs": 12748,
+   "pending": false
+  },
+  "voc-ft-o1": {
+   "xrt": 1.7733,
+   "runs": [
+    1.884,
+    1.669
+   ],
+   "sdr": 8.139,
+   "loadMs": 1450,
+   "warmMs": 3324,
+   "pending": false
+  },
+  "voc-ft-p55": {
+   "xrt": 2.6559,
+   "runs": [
+    2.703,
+    2.61
+   ],
+   "sdr": 7.921,
+   "loadMs": 1346,
+   "warmMs": 2437,
+   "pending": false
+  }
+ }
+}
